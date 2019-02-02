@@ -34,4 +34,102 @@ sass/
 `– main.scss                    # Główny plik Sassa
 
 */
+/* Font variables */
+/* The basic font sizes used in the base for em unit */
+/* Devices width for media query mixin */
+@import url("https://fonts.googleapis.com/css?family=Arima+Madurai:400,900|Roboto:100,400,900&amp;subset=latin-ext");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  font-size: 21px;
+}
+
+@media (min-width: 250px) {
+  body {
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 1366px) {
+  body {
+    font-size: 16px;
+  }
+}
+
+h1 {
+  font-family: "Arima Madurai", cursive;
+  font-size: 3.3125em;
+  line-height: 3.3125;
+}
+
+h2 {
+  font-family: "Arima Madurai", cursive;
+  font-size: 2.25em;
+  line-height: 2.25;
+}
+
+h3 {
+  font-family: "Arima Madurai", cursive;
+  font-size: 1.5em;
+  line-height: 1.5;
+}
+
+h4 {
+  font-family: "Roboto", sans-serif;
+  font-size: 1em;
+  line-height: 1.2;
+}
+
+p, a {
+  font-family: "Roboto", sans-serif;
+  font-size: 1em;
+  line-height: 1.2;
+}
 /*# sourceMappingURL=main.css.map */

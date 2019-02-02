@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css?family=Arima+Madurai:400,900|Roboto:100,400,900&amp;subset=latin-ext');
+
+// For setup font base size depends on device size
+body {
+  @include font-root;
+}
+
+h1 {
+  font-family: $arima;  
+  @include vertical-rhythm(3.3125em);
+}
+
+h2 {
+  font-family: $arima;  
+  @include vertical-rhythm(2.25em);  
+}
+
+h3 {
+  font-family: $arima;  
+  @include vertical-rhythm(1.5em);  
+}
+
+h4 {
+  font-family: $roboto; 
+  @include vertical-rhythm(1em);  
+}
+
+p, a {
+  font-family: $roboto; 
+  @include vertical-rhythm(1em);
+}

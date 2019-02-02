@@ -1,0 +1,17 @@
+/* Font variables */
+$arima: ('Arima Madurai', cursive);
+$roboto: ('Roboto', sans-serif);
+
+/* The basic font sizes used in the base for em unit */
+$root-font-sizes: (
+    'small': 12px,
+    'medium': 14px,
+    'large': 16px
+);
+
+/* Devices width for media query mixin */
+$devices: (
+    'small': 250px,
+    'medium-vertical': 768px,
+    'large': 1366px
+);

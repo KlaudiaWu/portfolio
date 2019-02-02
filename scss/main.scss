@@ -33,3 +33,25 @@ sass/
 `– main.scss                    # Główny plik Sassa
 
 */
+
+@import
+  "utils/functions",
+  "utils/mixins",
+  "utils/variables", 
+  "utils/helpers"; 
+
+@import 
+  "base/reset", 
+  "base/typography",
+  "base/root";
+
+@import
+  "components/buttons",
+  "components/header-bar";
+
+@import
+  "layout/header",
+  "layout/about-me",
+  "layout/contact",
+  "layout/form",
+  "layout/footer";
