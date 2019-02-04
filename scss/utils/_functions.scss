@@ -1,0 +1,5 @@
+@function calc-width($page-width, $columns) {
+  $elem-width: calc(((#{$page-width}/12) * #{$columns}));
+
+  @return $elem-width;
+}

@@ -3,6 +3,7 @@
 // For setup font base size depends on device size
 body {
   @include font-root;
+  color: $white;
 }
 
 h1 {

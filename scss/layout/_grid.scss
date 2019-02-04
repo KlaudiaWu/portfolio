@@ -1,0 +1,30 @@
+// Grid system for header section 
+.logo {
+  @include grid(7);
+  @include rwd('medium-vertical') {
+      @include grid(4);
+    }
+  @include rwd('large') {
+      @include grid(3);
+  }
+}
+  
+.menu {
+  @include grid(2);
+  @include rwd('medium-vertical') {
+      @include grid(1.5);
+    }
+  @include rwd('large') {
+      @include grid(1);
+    }
+  }
+  
+.socialmedia-bar {
+  @include grid(6);
+  @include rwd('medium-vertical') {
+      @include grid(3);
+    }
+  @include rwd('large') {
+      @include grid(2);
+    }
+  }

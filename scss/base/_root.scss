@@ -1,0 +1,23 @@
+* {
+  box-sizing: border-box;
+
+  ::before, ::after {
+    box-sizing: border-box;
+  }
+}
+
+body {
+  position: absolute;
+  overflow-x: hidden;
+  background-color: $navy-blue;
+}
+
+section {
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+a {
+  color: initial;
+  text-decoration: none;
+}

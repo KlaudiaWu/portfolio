@@ -37,6 +37,7 @@ sass/
 /* Font variables */
 /* The basic font sizes used in the base for em unit */
 /* Devices width for media query mixin */
+/* Colors */
 @import url("https://fonts.googleapis.com/css?family=Arima+Madurai:400,900|Roboto:100,400,900&amp;subset=latin-ext");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -89,6 +90,7 @@ table {
 
 body {
   font-size: 21px;
+  color: #FFFFFF;
 }
 
 @media (min-width: 250px) {
@@ -131,5 +133,475 @@ p, a {
   font-family: "Roboto", sans-serif;
   font-size: 1em;
   line-height: 1.2;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+* ::before, * ::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  position: absolute;
+  overflow-x: hidden;
+  background-color: #00000B;
+}
+
+section {
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+a {
+  color: initial;
+  text-decoration: none;
+}
+
+.header-bar {
+  position: absolute;
+  margin-top: 3vh;
+}
+
+.logo-bar, .socialmedia-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.header-bar .logo-bar {
+  width: 100vw;
+}
+
+.header-bar .logo-bar .logo {
+  height: auto;
+}
+
+.header-bar .logo-bar .menu {
+  height: auto;
+}
+
+.header-bar .socialmedia-bar {
+  height: 10vh;
+}
+
+.header-bar .socialmedia-bar a {
+  display: block;
+}
+
+.header-bar .socialmedia-bar a img {
+  height: 50px;
+  width: auto;
+}
+
+@media (min-width: 250px) {
+  .header-bar .socialmedia-bar {
+    width: 100vw;
+    margin: 0;
+    position: absolute;
+    top: 85vh;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .header-bar .socialmedia-bar a {
+    margin: 0 2.5vw 0 2.5vw;
+  }
+}
+
+@media (min-width: 1366px) {
+  .header-bar .socialmedia-bar a img {
+    height: 70px;
+  }
+}
+
+.logo {
+  width: calc(((100vw/12) * 7));
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+}
+
+@media (min-width: 768px) {
+  .logo {
+    width: calc(((100vw/12) * 4));
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+  }
+}
+
+@media (min-width: 1366px) {
+  .logo {
+    width: calc(((100vw/12) * 3));
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+  }
+}
+
+.menu {
+  width: calc(((100vw/12) * 2));
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+}
+
+@media (min-width: 768px) {
+  .menu {
+    width: calc(((100vw/12) * 1.5));
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+  }
+}
+
+@media (min-width: 1366px) {
+  .menu {
+    width: calc(((100vw/12) * 1));
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+  }
+}
+
+.socialmedia-bar {
+  width: calc(((100vw/12) * 6));
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+}
+
+@media (min-width: 768px) {
+  .socialmedia-bar {
+    width: calc(((100vw/12) * 3));
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+  }
+}
+
+@media (min-width: 1366px) {
+  .socialmedia-bar {
+    width: calc(((100vw/12) * 2));
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+  }
+}
+
+.header-section {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: url("/img/stars-background.svg") repeat;
+  background-size: 100%;
+}
+
+.solar-system {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.solar-system div {
+  position: absolute;
+}
+
+.solar-system .sun {
+  z-index: 1;
+  width: 40%;
+}
+
+@media (min-width: 1366px) {
+  .solar-system .sun {
+    width: 18%;
+  }
+}
+
+.solar-system .mercury {
+  -webkit-animation: mercury 5s infinite linear;
+          animation: mercury 5s infinite linear;
+  z-index: 2;
+  width: 40%;
+}
+
+@-webkit-keyframes mercury {
+  from {
+    -webkit-transform: rotate(0deg) translate(-12vw) rotate(0deg);
+            transform: rotate(0deg) translate(-12vw) rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg) translate(-12vw) rotate(-360deg);
+            transform: rotate(360deg) translate(-12vw) rotate(-360deg);
+  }
+}
+
+@keyframes mercury {
+  from {
+    -webkit-transform: rotate(0deg) translate(-12vw) rotate(0deg);
+            transform: rotate(0deg) translate(-12vw) rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg) translate(-12vw) rotate(-360deg);
+            transform: rotate(360deg) translate(-12vw) rotate(-360deg);
+  }
+}
+
+@media (min-width: 1366px) {
+  .solar-system .mercury {
+    width: 2%;
+  }
+}
+
+.solar-system .venus {
+  -webkit-animation: venus 7s infinite linear;
+          animation: venus 7s infinite linear;
+  z-index: 3;
+  width: 40%;
+}
+
+@-webkit-keyframes venus {
+  from {
+    -webkit-transform: rotate(0deg) translate(-15vw) rotate(0deg);
+            transform: rotate(0deg) translate(-15vw) rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg) translate(-15vw) rotate(-360deg);
+            transform: rotate(360deg) translate(-15vw) rotate(-360deg);
+  }
+}
+
+@keyframes venus {
+  from {
+    -webkit-transform: rotate(0deg) translate(-15vw) rotate(0deg);
+            transform: rotate(0deg) translate(-15vw) rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg) translate(-15vw) rotate(-360deg);
+            transform: rotate(360deg) translate(-15vw) rotate(-360deg);
+  }
+}
+
+@media (min-width: 1366px) {
+  .solar-system .venus {
+    width: 2%;
+  }
+}
+
+.solar-system .earth {
+  -webkit-animation: earth 9s infinite linear;
+          animation: earth 9s infinite linear;
+  z-index: 4;
+  width: 40%;
+}
+
+@-webkit-keyframes earth {
+  from {
+    -webkit-transform: rotate(0deg) translate(-19vw) rotate(0deg);
+            transform: rotate(0deg) translate(-19vw) rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg) translate(-19vw) rotate(-360deg);
+            transform: rotate(360deg) translate(-19vw) rotate(-360deg);
+  }
+}
+
+@keyframes earth {
+  from {
+    -webkit-transform: rotate(0deg) translate(-19vw) rotate(0deg);
+            transform: rotate(0deg) translate(-19vw) rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg) translate(-19vw) rotate(-360deg);
+            transform: rotate(360deg) translate(-19vw) rotate(-360deg);
+  }
+}
+
+@media (min-width: 1366px) {
+  .solar-system .earth {
+    width: 4%;
+  }
+}
+
+.solar-system .mars {
+  -webkit-animation: mars 10s infinite linear;
+          animation: mars 10s infinite linear;
+  z-index: 5;
+  z-index: 4;
+  width: 40%;
+}
+
+@-webkit-keyframes mars {
+  from {
+    -webkit-transform: rotate(0deg) translate(-25vw) rotate(0deg);
+            transform: rotate(0deg) translate(-25vw) rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg) translate(-25vw) rotate(-360deg);
+            transform: rotate(360deg) translate(-25vw) rotate(-360deg);
+  }
+}
+
+@keyframes mars {
+  from {
+    -webkit-transform: rotate(0deg) translate(-25vw) rotate(0deg);
+            transform: rotate(0deg) translate(-25vw) rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg) translate(-25vw) rotate(-360deg);
+            transform: rotate(360deg) translate(-25vw) rotate(-360deg);
+  }
+}
+
+@media (min-width: 1366px) {
+  .solar-system .mars {
+    width: 3%;
+  }
+}
+
+.solar-system .jupiter {
+  -webkit-animation: jupiter 15s infinite linear;
+          animation: jupiter 15s infinite linear;
+  z-index: 6;
+  width: 40%;
+}
+
+@-webkit-keyframes jupiter {
+  from {
+    -webkit-transform: rotate(0deg) translate(-31vw) rotate(0deg);
+            transform: rotate(0deg) translate(-31vw) rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg) translate(-31vw) rotate(-360deg);
+            transform: rotate(360deg) translate(-31vw) rotate(-360deg);
+  }
+}
+
+@keyframes jupiter {
+  from {
+    -webkit-transform: rotate(0deg) translate(-31vw) rotate(0deg);
+            transform: rotate(0deg) translate(-31vw) rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg) translate(-31vw) rotate(-360deg);
+            transform: rotate(360deg) translate(-31vw) rotate(-360deg);
+  }
+}
+
+@media (min-width: 1366px) {
+  .solar-system .jupiter {
+    width: 6%;
+  }
+}
+
+.solar-system .saturn {
+  -webkit-animation: saturn 17s infinite linear;
+          animation: saturn 17s infinite linear;
+  z-index: 7;
+  width: 40%;
+}
+
+@-webkit-keyframes saturn {
+  from {
+    -webkit-transform: rotate(0deg) translate(-38vw) rotate(0deg);
+            transform: rotate(0deg) translate(-38vw) rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg) translate(-38vw) rotate(-360deg);
+            transform: rotate(360deg) translate(-38vw) rotate(-360deg);
+  }
+}
+
+@keyframes saturn {
+  from {
+    -webkit-transform: rotate(0deg) translate(-38vw) rotate(0deg);
+            transform: rotate(0deg) translate(-38vw) rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg) translate(-38vw) rotate(-360deg);
+            transform: rotate(360deg) translate(-38vw) rotate(-360deg);
+  }
+}
+
+@media (min-width: 1366px) {
+  .solar-system .saturn {
+    width: 6%;
+  }
+}
+
+.solar-system .uranus {
+  -webkit-animation: uranus 22s infinite linear;
+          animation: uranus 22s infinite linear;
+  z-index: 8;
+  width: 40%;
+}
+
+@-webkit-keyframes uranus {
+  from {
+    -webkit-transform: rotate(0deg) translate(-46vw) rotate(0deg);
+            transform: rotate(0deg) translate(-46vw) rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg) translate(-46vw) rotate(-360deg);
+            transform: rotate(360deg) translate(-46vw) rotate(-360deg);
+  }
+}
+
+@keyframes uranus {
+  from {
+    -webkit-transform: rotate(0deg) translate(-46vw) rotate(0deg);
+            transform: rotate(0deg) translate(-46vw) rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg) translate(-46vw) rotate(-360deg);
+            transform: rotate(360deg) translate(-46vw) rotate(-360deg);
+  }
+}
+
+@media (min-width: 1366px) {
+  .solar-system .uranus {
+    width: 7%;
+  }
+}
+
+.solar-system .neptune {
+  -webkit-animation: neptune 28s infinite linear;
+          animation: neptune 28s infinite linear;
+  z-index: 9;
+  width: 40%;
+}
+
+@-webkit-keyframes neptune {
+  from {
+    -webkit-transform: rotate(0deg) translate(-57vw) rotate(0deg);
+            transform: rotate(0deg) translate(-57vw) rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg) translate(-57vw) rotate(-360deg);
+            transform: rotate(360deg) translate(-57vw) rotate(-360deg);
+  }
+}
+
+@keyframes neptune {
+  from {
+    -webkit-transform: rotate(0deg) translate(-57vw) rotate(0deg);
+            transform: rotate(0deg) translate(-57vw) rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg) translate(-57vw) rotate(-360deg);
+            transform: rotate(360deg) translate(-57vw) rotate(-360deg);
+  }
+}
+
+@media (min-width: 1366px) {
+  .solar-system .neptune {
+    width: 10%;
+  }
 }
 /*# sourceMappingURL=main.css.map */

@@ -1,0 +1,53 @@
+.header-bar {
+  position: absolute;
+  margin-top: 3vh;
+}
+
+.logo-bar, .socialmedia-bar {
+  display: flex;
+  flex-direction: row;
+}
+
+.header-bar {
+  .logo-bar{
+    width: 100vw;
+    .logo {
+      height: auto;
+    }
+    .menu {
+      height: auto;
+    }
+  }
+  .socialmedia-bar {
+    height: 10vh;
+    a {
+      display: block;
+        img {
+          height: 50px;
+          width: auto;
+        }
+    }
+  }
+
+  //I have broken the code for the element so that it would 
+  //be applied only to small screens and not to have to handle 
+  //it in large ones
+  @include rwd('small') {
+    
+    .socialmedia-bar {
+      width: 100vw;
+      margin: 0;
+      position: absolute;
+      top: 85vh;
+      justify-content: center;
+      a {
+        margin: 0 2.5vw 0 2.5vw;
+      }
+    }
+  }
+  @include rwd('large') {
+    .socialmedia-bar a img {
+      height: 70px;
+    }
+  }
+}

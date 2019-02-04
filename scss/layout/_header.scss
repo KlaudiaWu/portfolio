@@ -1,0 +1,93 @@
+.header-section {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: url("/img/stars-background.svg") repeat;
+  background-size: 100%;
+}
+
+.solar-system {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  div {
+  position: absolute;
+
+  }
+  .sun {
+    z-index: 1;
+    width: 40%;
+    @include rwd('large') {
+      width: 18%;
+    }
+  }
+  .mercury {
+    @include orbit-animation('mercury', 12vw, 5s);
+    z-index: 2;
+    width: 40%;
+    @include rwd('large') {
+      width: 2%;
+    }
+  }
+  .venus {
+    @include orbit-animation('venus', 15vw, 7s);
+    z-index: 3;
+    width: 40%;
+    @include rwd('large') {
+      width: 2%;
+    }
+  }
+  .earth {
+    @include orbit-animation('earth', 19vw, 9s);
+    z-index: 4;
+    width: 40%;
+    @include rwd('large') {
+      width: 4%;
+    }
+  }
+  .mars {
+    @include orbit-animation('mars', 25vw, 10s);
+    z-index: 5;
+    z-index: 4;
+    width: 40%;
+    @include rwd('large') {
+      width: 3%;
+    }
+  }
+  .jupiter {
+    @include orbit-animation('jupiter', 31vw, 15s);
+    z-index: 6;
+    width: 40%;
+    @include rwd('large') {
+      width: 6%;
+    }
+  }
+  .saturn {
+    @include orbit-animation('saturn', 38vw, 17s);
+    z-index: 7;
+    width: 40%;
+    @include rwd('large') {
+      width: 6%;
+    }
+  }
+  .uranus {
+    @include orbit-animation('uranus', 46vw, 22s);
+    z-index: 8;
+    width: 40%;
+    @include rwd('large') {
+      width: 7%;
+    }
+  } 
+  .neptune {
+    @include orbit-animation('neptune', 57vw, 28s);
+    z-index: 9;
+    width: 40%;
+    @include rwd('large') {
+      width: 10%;
+    }
+  }
+}
+
+
