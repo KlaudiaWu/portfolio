@@ -1,6 +1,7 @@
 .header-bar {
   position: absolute;
   margin-top: 3vh;
+  z-index: 10;
 }
 
 .logo-bar, .socialmedia-bar {
@@ -8,46 +9,72 @@
   flex-direction: row;
 }
 
+
 .header-bar {
-  .logo-bar{
+  @include rwd('large', 'l') {
     width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.logo-bar{
+  .logo {
+    height: auto;
+  }
+  .menu {
+    height: auto;
+    align-self: center;
+  }
+  @include rwd('small-p', 'p') {
+    .menu {
+      margin: 0 5vw;
+    }
+  }
+  @include rwd('large', 'l') {
+    width: unset;
     .logo {
-      height: auto;
+      position: absolute;
+      align-self: center;
+      left: 35%;
     }
     .menu {
-      height: auto;
+      position: fixed;
     }
   }
-  .socialmedia-bar {
-    height: 10vh;
-    a {
-      display: block;
-        img {
-          height: 50px;
-          width: auto;
-        }
-    }
+}
+
+.socialmedia-bar {
+  height: 10vh;
+  a {
+    display: block;
+    align-self: center;
+      img {
+        height: 50px;
+        width: auto;
+      }
   }
 
-  //I have broken the code for the element so that it would 
-  //be applied only to small screens and not to have to handle 
-  //it in large ones
-  @include rwd('small') {
-    
-    .socialmedia-bar {
-      width: 100vw;
-      margin: 0;
-      position: absolute;
-      top: 85vh;
-      justify-content: center;
-      a {
-        margin: 0 2.5vw 0 2.5vw;
-      }
+  @include rwd('small-p', 'p') {
+    width: 100vw;
+    margin: 0;
+    position: absolute;
+    top: 85vh;
+    justify-content: center;
+    a {
+      margin: 0 1.5vw 0 1.5vw;
     }
   }
-  @include rwd('large') {
-    .socialmedia-bar a img {
-      height: 70px;
+  @include rwd('large', 'l') {
+    width: initial;
+    position: unset;
+    margin-right: 3%;
+    a {
+      margin: 0 1vw 0 1vw; 
+      img {
+        height: 70px;
+      }
     }
   }
 }

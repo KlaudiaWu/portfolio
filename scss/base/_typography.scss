@@ -16,6 +16,11 @@ h2 {
   @include vertical-rhythm(2.25em);  
 }
 
+.sun h2 {
+  line-height: 1.5;
+  color: $black;
+}
+
 h3 {
   font-family: $arima;  
   @include vertical-rhythm(1.5em);  

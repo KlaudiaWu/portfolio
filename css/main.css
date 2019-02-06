@@ -93,12 +93,6 @@ body {
   color: #FFFFFF;
 }
 
-@media (min-width: 250px) {
-  body {
-    font-size: 12px;
-  }
-}
-
 @media (min-width: 1366px) {
   body {
     font-size: 16px;
@@ -115,6 +109,11 @@ h2 {
   font-family: "Arima Madurai", cursive;
   font-size: 2.25em;
   line-height: 2.25;
+}
+
+.sun h2 {
+  line-height: 1.5;
+  color: #000000;
 }
 
 h3 {
@@ -164,6 +163,7 @@ a {
 .header-bar {
   position: absolute;
   margin-top: 3vh;
+  z-index: 10;
 }
 
 .logo-bar, .socialmedia-bar {
@@ -176,33 +176,72 @@ a {
           flex-direction: row;
 }
 
-.header-bar .logo-bar {
-  width: 100vw;
+@media (min-width: 1366px) and (orientation: landscape) {
+  .header-bar {
+    width: 100vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
-.header-bar .logo-bar .logo {
+.logo-bar .logo {
   height: auto;
 }
 
-.header-bar .logo-bar .menu {
+.logo-bar .menu {
   height: auto;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
-.header-bar .socialmedia-bar {
+@media (min-width: 250px) and (orientation: portrait) {
+  .logo-bar .menu {
+    margin: 0 5vw;
+  }
+}
+
+@media (min-width: 1366px) and (orientation: landscape) {
+  .logo-bar {
+    width: unset;
+  }
+  .logo-bar .logo {
+    position: absolute;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    left: 35%;
+  }
+  .logo-bar .menu {
+    position: fixed;
+  }
+}
+
+.socialmedia-bar {
   height: 10vh;
 }
 
-.header-bar .socialmedia-bar a {
+.socialmedia-bar a {
   display: block;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
-.header-bar .socialmedia-bar a img {
+.socialmedia-bar a img {
   height: 50px;
   width: auto;
 }
 
-@media (min-width: 250px) {
-  .header-bar .socialmedia-bar {
+@media (min-width: 250px) and (orientation: portrait) {
+  .socialmedia-bar {
     width: 100vw;
     margin: 0;
     position: absolute;
@@ -211,80 +250,133 @@ a {
         -ms-flex-pack: center;
             justify-content: center;
   }
-  .header-bar .socialmedia-bar a {
-    margin: 0 2.5vw 0 2.5vw;
+  .socialmedia-bar a {
+    margin: 0 1.5vw 0 1.5vw;
   }
 }
 
-@media (min-width: 1366px) {
-  .header-bar .socialmedia-bar a img {
+@media (min-width: 1366px) and (orientation: landscape) {
+  .socialmedia-bar {
+    width: initial;
+    position: unset;
+    margin-right: 3%;
+  }
+  .socialmedia-bar a {
+    margin: 0 1vw 0 1vw;
+  }
+  .socialmedia-bar a img {
     height: 70px;
   }
 }
 
 .logo {
   width: calc(((100vw/12) * 7));
-  margin-left: 2.5%;
-  margin-right: 2.5%;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1366px) and (orientation: landscape) {
   .logo {
-    width: calc(((100vw/12) * 4));
-    margin-left: 2.5%;
-    margin-right: 2.5%;
+    margin-left: 3%;
+    margin-right: 3%;
   }
 }
 
-@media (min-width: 1366px) {
+@media (min-width: 1024px) and (orientation: landscape) {
   .logo {
-    width: calc(((100vw/12) * 3));
-    margin-left: 2.5%;
-    margin-right: 2.5%;
+    width: calc(((100vw/12) * 4));
+  }
+}
+
+@media (min-width: 1024px) and (orientation: landscape) and (min-width: 1366px) and (orientation: landscape) {
+  .logo {
+    margin-left: 3%;
+    margin-right: 3%;
+  }
+}
+
+@media (min-width: 1366px) and (orientation: landscape) {
+  .logo {
+    width: calc(((100vw/12) * 2.5));
+  }
+}
+
+@media (min-width: 1366px) and (orientation: landscape) and (min-width: 1366px) and (orientation: landscape) {
+  .logo {
+    margin-left: 3%;
+    margin-right: 3%;
   }
 }
 
 .menu {
   width: calc(((100vw/12) * 2));
-  margin-left: 2.5%;
-  margin-right: 2.5%;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1366px) and (orientation: landscape) {
   .menu {
-    width: calc(((100vw/12) * 1.5));
-    margin-left: 2.5%;
-    margin-right: 2.5%;
+    margin-left: 3%;
+    margin-right: 3%;
   }
 }
 
-@media (min-width: 1366px) {
+@media (min-width: 1024px) and (orientation: landscape) {
   .menu {
-    width: calc(((100vw/12) * 1));
-    margin-left: 2.5%;
-    margin-right: 2.5%;
+    width: calc(((100vw/12) * 1.5));
+  }
+}
+
+@media (min-width: 1024px) and (orientation: landscape) and (min-width: 1366px) and (orientation: landscape) {
+  .menu {
+    margin-left: 3%;
+    margin-right: 3%;
+  }
+}
+
+@media (min-width: 1366px) and (orientation: landscape) {
+  .menu {
+    width: calc(((100vw/12) * 0.6));
+  }
+}
+
+@media (min-width: 1366px) and (orientation: landscape) and (min-width: 1366px) and (orientation: landscape) {
+  .menu {
+    margin-left: 3%;
+    margin-right: 3%;
   }
 }
 
 .socialmedia-bar {
-  width: calc(((100vw/12) * 6));
-  margin-left: 2.5%;
-  margin-right: 2.5%;
+  width: calc(((100vw/12) * 12));
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1366px) and (orientation: landscape) {
   .socialmedia-bar {
-    width: calc(((100vw/12) * 3));
-    margin-left: 2.5%;
-    margin-right: 2.5%;
+    margin-left: 3%;
+    margin-right: 3%;
   }
 }
 
-@media (min-width: 1366px) {
+@media (min-width: 1024px) and (orientation: landscape) {
+  .socialmedia-bar {
+    width: calc(((100vw/12) * 3));
+  }
+}
+
+@media (min-width: 1024px) and (orientation: landscape) and (min-width: 1366px) and (orientation: landscape) {
+  .socialmedia-bar {
+    margin-left: 3%;
+    margin-right: 3%;
+  }
+}
+
+@media (min-width: 1366px) and (orientation: landscape) {
   .socialmedia-bar {
     width: calc(((100vw/12) * 2));
-    margin-left: 2.5%;
-    margin-right: 2.5%;
+  }
+}
+
+@media (min-width: 1366px) and (orientation: landscape) and (min-width: 1366px) and (orientation: landscape) {
+  .socialmedia-bar {
+    margin-left: 3%;
+    margin-right: 3%;
   }
 }
 
@@ -315,10 +407,23 @@ a {
 
 .solar-system .sun {
   z-index: 1;
-  width: 40%;
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
-@media (min-width: 1366px) {
+.solar-system .sun h2 {
+  position: absolute;
+  z-index: 2;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  text-align: center;
+  margin: 0 10%;
+}
+
+@media (min-width: 1366px) and (orientation: landscape) {
   .solar-system .sun {
     width: 18%;
   }
@@ -328,34 +433,35 @@ a {
   -webkit-animation: mercury 5s infinite linear;
           animation: mercury 5s infinite linear;
   z-index: 2;
-  width: 40%;
+  width: 6%;
 }
 
-@-webkit-keyframes mercury {
-  from {
-    -webkit-transform: rotate(0deg) translate(-12vw) rotate(0deg);
-            transform: rotate(0deg) translate(-12vw) rotate(0deg);
+@media (min-width: 1366px) and (orientation: landscape) {
+  @-webkit-keyframes mercury {
+    from {
+      -webkit-transform: rotate(0deg) translate(-12.30769vw) rotate(0deg);
+              transform: rotate(0deg) translate(-12.30769vw) rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(360deg) translate(-12.30769vw) rotate(-360deg);
+              transform: rotate(360deg) translate(-12.30769vw) rotate(-360deg);
+    }
   }
-  to {
-    -webkit-transform: rotate(360deg) translate(-12vw) rotate(-360deg);
-            transform: rotate(360deg) translate(-12vw) rotate(-360deg);
+  @keyframes mercury {
+    from {
+      -webkit-transform: rotate(0deg) translate(-12.30769vw) rotate(0deg);
+              transform: rotate(0deg) translate(-12.30769vw) rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(360deg) translate(-12.30769vw) rotate(-360deg);
+              transform: rotate(360deg) translate(-12.30769vw) rotate(-360deg);
+    }
   }
 }
 
-@keyframes mercury {
-  from {
-    -webkit-transform: rotate(0deg) translate(-12vw) rotate(0deg);
-            transform: rotate(0deg) translate(-12vw) rotate(0deg);
-  }
-  to {
-    -webkit-transform: rotate(360deg) translate(-12vw) rotate(-360deg);
-            transform: rotate(360deg) translate(-12vw) rotate(-360deg);
-  }
-}
-
-@media (min-width: 1366px) {
+@media (min-width: 1366px) and (orientation: landscape) {
   .solar-system .mercury {
-    width: 2%;
+    width: 1%;
   }
 }
 
@@ -363,34 +469,35 @@ a {
   -webkit-animation: venus 7s infinite linear;
           animation: venus 7s infinite linear;
   z-index: 3;
-  width: 40%;
+  width: 6%;
 }
 
-@-webkit-keyframes venus {
-  from {
-    -webkit-transform: rotate(0deg) translate(-15vw) rotate(0deg);
-            transform: rotate(0deg) translate(-15vw) rotate(0deg);
+@media (min-width: 1366px) and (orientation: landscape) {
+  @-webkit-keyframes venus {
+    from {
+      -webkit-transform: rotate(0deg) translate(-15.38462vw) rotate(0deg);
+              transform: rotate(0deg) translate(-15.38462vw) rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(360deg) translate(-15.38462vw) rotate(-360deg);
+              transform: rotate(360deg) translate(-15.38462vw) rotate(-360deg);
+    }
   }
-  to {
-    -webkit-transform: rotate(360deg) translate(-15vw) rotate(-360deg);
-            transform: rotate(360deg) translate(-15vw) rotate(-360deg);
+  @keyframes venus {
+    from {
+      -webkit-transform: rotate(0deg) translate(-15.38462vw) rotate(0deg);
+              transform: rotate(0deg) translate(-15.38462vw) rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(360deg) translate(-15.38462vw) rotate(-360deg);
+              transform: rotate(360deg) translate(-15.38462vw) rotate(-360deg);
+    }
   }
 }
 
-@keyframes venus {
-  from {
-    -webkit-transform: rotate(0deg) translate(-15vw) rotate(0deg);
-            transform: rotate(0deg) translate(-15vw) rotate(0deg);
-  }
-  to {
-    -webkit-transform: rotate(360deg) translate(-15vw) rotate(-360deg);
-            transform: rotate(360deg) translate(-15vw) rotate(-360deg);
-  }
-}
-
-@media (min-width: 1366px) {
+@media (min-width: 1366px) and (orientation: landscape) {
   .solar-system .venus {
-    width: 2%;
+    width: 1%;
   }
 }
 
@@ -398,34 +505,35 @@ a {
   -webkit-animation: earth 9s infinite linear;
           animation: earth 9s infinite linear;
   z-index: 4;
-  width: 40%;
+  width: 8%;
 }
 
-@-webkit-keyframes earth {
-  from {
-    -webkit-transform: rotate(0deg) translate(-19vw) rotate(0deg);
-            transform: rotate(0deg) translate(-19vw) rotate(0deg);
+@media (min-width: 1366px) and (orientation: landscape) {
+  @-webkit-keyframes earth {
+    from {
+      -webkit-transform: rotate(0deg) translate(-18.84615vw) rotate(0deg);
+              transform: rotate(0deg) translate(-18.84615vw) rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(360deg) translate(-18.84615vw) rotate(-360deg);
+              transform: rotate(360deg) translate(-18.84615vw) rotate(-360deg);
+    }
   }
-  to {
-    -webkit-transform: rotate(360deg) translate(-19vw) rotate(-360deg);
-            transform: rotate(360deg) translate(-19vw) rotate(-360deg);
+  @keyframes earth {
+    from {
+      -webkit-transform: rotate(0deg) translate(-18.84615vw) rotate(0deg);
+              transform: rotate(0deg) translate(-18.84615vw) rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(360deg) translate(-18.84615vw) rotate(-360deg);
+              transform: rotate(360deg) translate(-18.84615vw) rotate(-360deg);
+    }
   }
 }
 
-@keyframes earth {
-  from {
-    -webkit-transform: rotate(0deg) translate(-19vw) rotate(0deg);
-            transform: rotate(0deg) translate(-19vw) rotate(0deg);
-  }
-  to {
-    -webkit-transform: rotate(360deg) translate(-19vw) rotate(-360deg);
-            transform: rotate(360deg) translate(-19vw) rotate(-360deg);
-  }
-}
-
-@media (min-width: 1366px) {
+@media (min-width: 1366px) and (orientation: landscape) {
   .solar-system .earth {
-    width: 4%;
+    width: 3%;
   }
 }
 
@@ -433,35 +541,35 @@ a {
   -webkit-animation: mars 10s infinite linear;
           animation: mars 10s infinite linear;
   z-index: 5;
-  z-index: 4;
-  width: 40%;
+  width: 7%;
 }
 
-@-webkit-keyframes mars {
-  from {
-    -webkit-transform: rotate(0deg) translate(-25vw) rotate(0deg);
-            transform: rotate(0deg) translate(-25vw) rotate(0deg);
+@media (min-width: 1366px) and (orientation: landscape) {
+  @-webkit-keyframes mars {
+    from {
+      -webkit-transform: rotate(0deg) translate(-22.30769vw) rotate(0deg);
+              transform: rotate(0deg) translate(-22.30769vw) rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(360deg) translate(-22.30769vw) rotate(-360deg);
+              transform: rotate(360deg) translate(-22.30769vw) rotate(-360deg);
+    }
   }
-  to {
-    -webkit-transform: rotate(360deg) translate(-25vw) rotate(-360deg);
-            transform: rotate(360deg) translate(-25vw) rotate(-360deg);
+  @keyframes mars {
+    from {
+      -webkit-transform: rotate(0deg) translate(-22.30769vw) rotate(0deg);
+              transform: rotate(0deg) translate(-22.30769vw) rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(360deg) translate(-22.30769vw) rotate(-360deg);
+              transform: rotate(360deg) translate(-22.30769vw) rotate(-360deg);
+    }
   }
 }
 
-@keyframes mars {
-  from {
-    -webkit-transform: rotate(0deg) translate(-25vw) rotate(0deg);
-            transform: rotate(0deg) translate(-25vw) rotate(0deg);
-  }
-  to {
-    -webkit-transform: rotate(360deg) translate(-25vw) rotate(-360deg);
-            transform: rotate(360deg) translate(-25vw) rotate(-360deg);
-  }
-}
-
-@media (min-width: 1366px) {
+@media (min-width: 1366px) and (orientation: landscape) {
   .solar-system .mars {
-    width: 3%;
+    width: 2%;
   }
 }
 
@@ -469,34 +577,35 @@ a {
   -webkit-animation: jupiter 15s infinite linear;
           animation: jupiter 15s infinite linear;
   z-index: 6;
-  width: 40%;
+  width: 11%;
 }
 
-@-webkit-keyframes jupiter {
-  from {
-    -webkit-transform: rotate(0deg) translate(-31vw) rotate(0deg);
-            transform: rotate(0deg) translate(-31vw) rotate(0deg);
+@media (min-width: 1366px) and (orientation: landscape) {
+  @-webkit-keyframes jupiter {
+    from {
+      -webkit-transform: rotate(0deg) translate(-26.92308vw) rotate(0deg);
+              transform: rotate(0deg) translate(-26.92308vw) rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(360deg) translate(-26.92308vw) rotate(-360deg);
+              transform: rotate(360deg) translate(-26.92308vw) rotate(-360deg);
+    }
   }
-  to {
-    -webkit-transform: rotate(360deg) translate(-31vw) rotate(-360deg);
-            transform: rotate(360deg) translate(-31vw) rotate(-360deg);
+  @keyframes jupiter {
+    from {
+      -webkit-transform: rotate(0deg) translate(-26.92308vw) rotate(0deg);
+              transform: rotate(0deg) translate(-26.92308vw) rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(360deg) translate(-26.92308vw) rotate(-360deg);
+              transform: rotate(360deg) translate(-26.92308vw) rotate(-360deg);
+    }
   }
 }
 
-@keyframes jupiter {
-  from {
-    -webkit-transform: rotate(0deg) translate(-31vw) rotate(0deg);
-            transform: rotate(0deg) translate(-31vw) rotate(0deg);
-  }
-  to {
-    -webkit-transform: rotate(360deg) translate(-31vw) rotate(-360deg);
-            transform: rotate(360deg) translate(-31vw) rotate(-360deg);
-  }
-}
-
-@media (min-width: 1366px) {
+@media (min-width: 1366px) and (orientation: landscape) {
   .solar-system .jupiter {
-    width: 6%;
+    width: 4.5%;
   }
 }
 
@@ -504,34 +613,35 @@ a {
   -webkit-animation: saturn 17s infinite linear;
           animation: saturn 17s infinite linear;
   z-index: 7;
-  width: 40%;
+  width: 9%;
 }
 
-@-webkit-keyframes saturn {
-  from {
-    -webkit-transform: rotate(0deg) translate(-38vw) rotate(0deg);
-            transform: rotate(0deg) translate(-38vw) rotate(0deg);
+@media (min-width: 1366px) and (orientation: landscape) {
+  @-webkit-keyframes saturn {
+    from {
+      -webkit-transform: rotate(0deg) translate(-33.07692vw) rotate(0deg);
+              transform: rotate(0deg) translate(-33.07692vw) rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(360deg) translate(-33.07692vw) rotate(-360deg);
+              transform: rotate(360deg) translate(-33.07692vw) rotate(-360deg);
+    }
   }
-  to {
-    -webkit-transform: rotate(360deg) translate(-38vw) rotate(-360deg);
-            transform: rotate(360deg) translate(-38vw) rotate(-360deg);
+  @keyframes saturn {
+    from {
+      -webkit-transform: rotate(0deg) translate(-33.07692vw) rotate(0deg);
+              transform: rotate(0deg) translate(-33.07692vw) rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(360deg) translate(-33.07692vw) rotate(-360deg);
+              transform: rotate(360deg) translate(-33.07692vw) rotate(-360deg);
+    }
   }
 }
 
-@keyframes saturn {
-  from {
-    -webkit-transform: rotate(0deg) translate(-38vw) rotate(0deg);
-            transform: rotate(0deg) translate(-38vw) rotate(0deg);
-  }
-  to {
-    -webkit-transform: rotate(360deg) translate(-38vw) rotate(-360deg);
-            transform: rotate(360deg) translate(-38vw) rotate(-360deg);
-  }
-}
-
-@media (min-width: 1366px) {
+@media (min-width: 1366px) and (orientation: landscape) {
   .solar-system .saturn {
-    width: 6%;
+    width: 4%;
   }
 }
 
@@ -539,34 +649,41 @@ a {
   -webkit-animation: uranus 22s infinite linear;
           animation: uranus 22s infinite linear;
   z-index: 8;
-  width: 40%;
+  width: 13%;
 }
 
-@-webkit-keyframes uranus {
-  from {
-    -webkit-transform: rotate(0deg) translate(-46vw) rotate(0deg);
-            transform: rotate(0deg) translate(-46vw) rotate(0deg);
+@media (min-width: 1366px) and (orientation: landscape) {
+  @-webkit-keyframes uranus {
+    from {
+      -webkit-transform: rotate(0deg) translate(-39.23077vw) rotate(0deg);
+              transform: rotate(0deg) translate(-39.23077vw) rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(360deg) translate(-39.23077vw) rotate(-360deg);
+              transform: rotate(360deg) translate(-39.23077vw) rotate(-360deg);
+    }
   }
-  to {
-    -webkit-transform: rotate(360deg) translate(-46vw) rotate(-360deg);
-            transform: rotate(360deg) translate(-46vw) rotate(-360deg);
+  @keyframes uranus {
+    from {
+      -webkit-transform: rotate(0deg) translate(-39.23077vw) rotate(0deg);
+              transform: rotate(0deg) translate(-39.23077vw) rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(360deg) translate(-39.23077vw) rotate(-360deg);
+              transform: rotate(360deg) translate(-39.23077vw) rotate(-360deg);
+    }
   }
 }
 
-@keyframes uranus {
-  from {
-    -webkit-transform: rotate(0deg) translate(-46vw) rotate(0deg);
-            transform: rotate(0deg) translate(-46vw) rotate(0deg);
-  }
-  to {
-    -webkit-transform: rotate(360deg) translate(-46vw) rotate(-360deg);
-            transform: rotate(360deg) translate(-46vw) rotate(-360deg);
-  }
-}
-
-@media (min-width: 1366px) {
+@media (min-width: 250px) and (orientation: portrait) {
   .solar-system .uranus {
-    width: 7%;
+    display: none;
+  }
+}
+
+@media (min-width: 1366px) and (orientation: landscape) {
+  .solar-system .uranus {
+    width: 6%;
   }
 }
 
@@ -574,34 +691,47 @@ a {
   -webkit-animation: neptune 28s infinite linear;
           animation: neptune 28s infinite linear;
   z-index: 9;
-  width: 40%;
+  width: 15%;
 }
 
-@-webkit-keyframes neptune {
-  from {
-    -webkit-transform: rotate(0deg) translate(-57vw) rotate(0deg);
-            transform: rotate(0deg) translate(-57vw) rotate(0deg);
+@media (min-width: 1366px) and (orientation: landscape) {
+  @-webkit-keyframes neptune {
+    from {
+      -webkit-transform: rotate(0deg) translate(-47.69231vw) rotate(0deg);
+              transform: rotate(0deg) translate(-47.69231vw) rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(360deg) translate(-47.69231vw) rotate(-360deg);
+              transform: rotate(360deg) translate(-47.69231vw) rotate(-360deg);
+    }
   }
-  to {
-    -webkit-transform: rotate(360deg) translate(-57vw) rotate(-360deg);
-            transform: rotate(360deg) translate(-57vw) rotate(-360deg);
+  @keyframes neptune {
+    from {
+      -webkit-transform: rotate(0deg) translate(-47.69231vw) rotate(0deg);
+              transform: rotate(0deg) translate(-47.69231vw) rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(360deg) translate(-47.69231vw) rotate(-360deg);
+              transform: rotate(360deg) translate(-47.69231vw) rotate(-360deg);
+    }
   }
 }
 
-@keyframes neptune {
-  from {
-    -webkit-transform: rotate(0deg) translate(-57vw) rotate(0deg);
-            transform: rotate(0deg) translate(-57vw) rotate(0deg);
-  }
-  to {
-    -webkit-transform: rotate(360deg) translate(-57vw) rotate(-360deg);
-            transform: rotate(360deg) translate(-57vw) rotate(-360deg);
-  }
-}
-
-@media (min-width: 1366px) {
+@media (min-width: 250px) and (orientation: portrait) {
   .solar-system .neptune {
-    width: 10%;
+    display: none;
   }
+}
+
+@media (min-width: 1366px) and (orientation: landscape) {
+  .solar-system .neptune {
+    width: 8%;
+  }
+}
+
+.mercury:hover, .venus:hover, .earth:hover, .mars:hover,
+.jupiter:hover, .saturn:hover, .uranus:hover, .neptune:hover {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
 }
 /*# sourceMappingURL=main.css.map */

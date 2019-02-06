@@ -1,5 +1,16 @@
 // Mixin for media query
-@mixin rwd($device-width) { 
+@mixin rwd($device-width, $orientation) { 
+    @if map-has-key($devices, $device-width) {
+      @media (min-width: #{map-get($devices, $device-width)}) and (orientation: #{map-get($orientations, $orientation)}){
+        @content;
+      }
+    } @else {
+      @warn "No value in `#{$devices}` map. ";
+    }
+  }
+  
+  //rwd mixin for typography (without orientation)
+  @mixin rwd-t($device-width) { 
     @if map-has-key($devices, $device-width) {
       @media (min-width: #{map-get($devices, $device-width)}) {
         @content;
@@ -8,14 +19,21 @@
       @warn "No value in `#{$devices}` map. ";
     }
   }
-  
+
   // Mixin for grid system 
   @mixin grid($columns) {
     $page-width: 100vw;
     
     width: calc-width($page-width, $columns);
+    
+    @include rwd('small', 'l') {
     margin-left: 2.5%;
     margin-right: 2.5%;
+    }
+    @include rwd('large', 'l') {
+      margin-left: 3%;
+      margin-right: 3%;
+    }
 
   }
   
@@ -26,7 +44,7 @@
     font-size: $fontSize;
   
     @each $key, $value in $root-font-sizes {
-      @include rwd ($key) {
+      @include rwd-t ($key) {
         font-size: $value;
       } 
     }  
@@ -70,7 +88,7 @@
     }
   }
 
-  // Mixin for easy background image. Position are two number
+// Mixin for easy background image. Position are two number
 // values, and 'if' check if value are string or number.
 @mixin background-img ($img, $type, $position-x, $position-y, $size-x, $size-y) {
     background-image: url('/img/#{$img}.#{$type}');
@@ -87,16 +105,32 @@
 
 
 @mixin orbit-animation ($animation-name, $distance, $speed) {
-  @keyframes #{$animation-name} {
-    from {
-      transform: rotate(0deg)
-                 translate(-$distance)
-                 rotate(0deg);
+  @include rwd('small', 'p'){
+    @keyframes #{$animation-name} {
+      from {
+        transform: rotate(0deg)
+                  translate(-$distance)
+                  rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg)
+                  translate(-$distance)
+                  rotate(-360deg);
+      }
     }
-    to {
-      transform: rotate(360deg)
-                 translate(-$distance) 
-                 rotate(-360deg);
+  }
+  @include rwd('large', 'l'){
+    @keyframes #{$animation-name} {
+      from {
+        transform: rotate(0deg)
+                  translate(-$distance/2.6)
+                  rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg)
+                  translate(-$distance/2.6)
+                  rotate(-360deg);
+      }
     }
   }
 

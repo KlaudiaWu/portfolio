@@ -11,9 +11,16 @@ $root-font-sizes: (
 
 /* Devices width for media query mixin */
 $devices: (
-  'small': 250px,
-  'medium-vertical': 768px,
+  'small-p': 250px,
+  'small-l': 500px,
+  'medium-p': 768px,
+  'medium-l': 1024px,
   'large': 1366px
+);
+
+$orientations: (
+  'l': 'landscape',
+  'p': 'portrait'
 );
 
 /* Colors */
