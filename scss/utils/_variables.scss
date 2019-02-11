@@ -9,6 +9,13 @@ $root-font-sizes: (
   'large': 16px
 );
 
+/* Devices width for media query in typography */
+$devices-t: (
+  'small': 250px,
+  'medium': 768px,
+  'large': 1366px
+);
+
 /* Devices width for media query mixin */
 $devices: (
   'small-p': 250px,
@@ -22,6 +29,7 @@ $orientations: (
   'l': 'landscape',
   'p': 'portrait'
 );
+
 
 /* Colors */
 $navy-blue: #00000B;

@@ -36,6 +36,7 @@ sass/
 */
 /* Font variables */
 /* The basic font sizes used in the base for em unit */
+/* Devices width for media query in typography */
 /* Devices width for media query mixin */
 /* Colors */
 @import url("https://fonts.googleapis.com/css?family=Arima+Madurai:400,900|Roboto:100,400,900&amp;subset=latin-ext");
@@ -91,6 +92,18 @@ table {
 body {
   font-size: 21px;
   color: #FFFFFF;
+}
+
+@media (min-width: 250px) {
+  body {
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 768px) {
+  body {
+    font-size: 14px;
+  }
 }
 
 @media (min-width: 1366px) {
@@ -273,6 +286,13 @@ a {
   width: calc(((100vw/12) * 7));
 }
 
+@media (min-width: 250px) and (orientation: portrait) {
+  .logo {
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+  }
+}
+
 @media (min-width: 1366px) and (orientation: landscape) {
   .logo {
     margin-left: 3%;
@@ -283,6 +303,13 @@ a {
 @media (min-width: 1024px) and (orientation: landscape) {
   .logo {
     width: calc(((100vw/12) * 4));
+  }
+}
+
+@media (min-width: 1024px) and (orientation: landscape) and (min-width: 250px) and (orientation: portrait) {
+  .logo {
+    margin-left: 2.5%;
+    margin-right: 2.5%;
   }
 }
 
@@ -299,6 +326,13 @@ a {
   }
 }
 
+@media (min-width: 1366px) and (orientation: landscape) and (min-width: 250px) and (orientation: portrait) {
+  .logo {
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+  }
+}
+
 @media (min-width: 1366px) and (orientation: landscape) and (min-width: 1366px) and (orientation: landscape) {
   .logo {
     margin-left: 3%;
@@ -308,6 +342,13 @@ a {
 
 .menu {
   width: calc(((100vw/12) * 2));
+}
+
+@media (min-width: 250px) and (orientation: portrait) {
+  .menu {
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+  }
 }
 
 @media (min-width: 1366px) and (orientation: landscape) {
@@ -320,6 +361,13 @@ a {
 @media (min-width: 1024px) and (orientation: landscape) {
   .menu {
     width: calc(((100vw/12) * 1.5));
+  }
+}
+
+@media (min-width: 1024px) and (orientation: landscape) and (min-width: 250px) and (orientation: portrait) {
+  .menu {
+    margin-left: 2.5%;
+    margin-right: 2.5%;
   }
 }
 
@@ -336,6 +384,13 @@ a {
   }
 }
 
+@media (min-width: 1366px) and (orientation: landscape) and (min-width: 250px) and (orientation: portrait) {
+  .menu {
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+  }
+}
+
 @media (min-width: 1366px) and (orientation: landscape) and (min-width: 1366px) and (orientation: landscape) {
   .menu {
     margin-left: 3%;
@@ -345,6 +400,13 @@ a {
 
 .socialmedia-bar {
   width: calc(((100vw/12) * 12));
+}
+
+@media (min-width: 250px) and (orientation: portrait) {
+  .socialmedia-bar {
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+  }
 }
 
 @media (min-width: 1366px) and (orientation: landscape) {
@@ -360,6 +422,13 @@ a {
   }
 }
 
+@media (min-width: 1024px) and (orientation: landscape) and (min-width: 250px) and (orientation: portrait) {
+  .socialmedia-bar {
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+  }
+}
+
 @media (min-width: 1024px) and (orientation: landscape) and (min-width: 1366px) and (orientation: landscape) {
   .socialmedia-bar {
     margin-left: 3%;
@@ -370,6 +439,13 @@ a {
 @media (min-width: 1366px) and (orientation: landscape) {
   .socialmedia-bar {
     width: calc(((100vw/12) * 2));
+  }
+}
+
+@media (min-width: 1366px) and (orientation: landscape) and (min-width: 250px) and (orientation: portrait) {
+  .socialmedia-bar {
+    margin-left: 2.5%;
+    margin-right: 2.5%;
   }
 }
 
@@ -436,6 +512,29 @@ a {
   width: 6%;
 }
 
+@media (min-width: 250px) and (orientation: portrait) {
+  @-webkit-keyframes mercury {
+    from {
+      -webkit-transform: rotate(0deg) translate(-32vw) rotate(0deg);
+              transform: rotate(0deg) translate(-32vw) rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(360deg) translate(-32vw) rotate(-360deg);
+              transform: rotate(360deg) translate(-32vw) rotate(-360deg);
+    }
+  }
+  @keyframes mercury {
+    from {
+      -webkit-transform: rotate(0deg) translate(-32vw) rotate(0deg);
+              transform: rotate(0deg) translate(-32vw) rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(360deg) translate(-32vw) rotate(-360deg);
+              transform: rotate(360deg) translate(-32vw) rotate(-360deg);
+    }
+  }
+}
+
 @media (min-width: 1366px) and (orientation: landscape) {
   @-webkit-keyframes mercury {
     from {
@@ -470,6 +569,29 @@ a {
           animation: venus 7s infinite linear;
   z-index: 3;
   width: 6%;
+}
+
+@media (min-width: 250px) and (orientation: portrait) {
+  @-webkit-keyframes venus {
+    from {
+      -webkit-transform: rotate(0deg) translate(-40vw) rotate(0deg);
+              transform: rotate(0deg) translate(-40vw) rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(360deg) translate(-40vw) rotate(-360deg);
+              transform: rotate(360deg) translate(-40vw) rotate(-360deg);
+    }
+  }
+  @keyframes venus {
+    from {
+      -webkit-transform: rotate(0deg) translate(-40vw) rotate(0deg);
+              transform: rotate(0deg) translate(-40vw) rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(360deg) translate(-40vw) rotate(-360deg);
+              transform: rotate(360deg) translate(-40vw) rotate(-360deg);
+    }
+  }
 }
 
 @media (min-width: 1366px) and (orientation: landscape) {
@@ -508,6 +630,29 @@ a {
   width: 8%;
 }
 
+@media (min-width: 250px) and (orientation: portrait) {
+  @-webkit-keyframes earth {
+    from {
+      -webkit-transform: rotate(0deg) translate(-49vw) rotate(0deg);
+              transform: rotate(0deg) translate(-49vw) rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(360deg) translate(-49vw) rotate(-360deg);
+              transform: rotate(360deg) translate(-49vw) rotate(-360deg);
+    }
+  }
+  @keyframes earth {
+    from {
+      -webkit-transform: rotate(0deg) translate(-49vw) rotate(0deg);
+              transform: rotate(0deg) translate(-49vw) rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(360deg) translate(-49vw) rotate(-360deg);
+              transform: rotate(360deg) translate(-49vw) rotate(-360deg);
+    }
+  }
+}
+
 @media (min-width: 1366px) and (orientation: landscape) {
   @-webkit-keyframes earth {
     from {
@@ -542,6 +687,29 @@ a {
           animation: mars 10s infinite linear;
   z-index: 5;
   width: 7%;
+}
+
+@media (min-width: 250px) and (orientation: portrait) {
+  @-webkit-keyframes mars {
+    from {
+      -webkit-transform: rotate(0deg) translate(-58vw) rotate(0deg);
+              transform: rotate(0deg) translate(-58vw) rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(360deg) translate(-58vw) rotate(-360deg);
+              transform: rotate(360deg) translate(-58vw) rotate(-360deg);
+    }
+  }
+  @keyframes mars {
+    from {
+      -webkit-transform: rotate(0deg) translate(-58vw) rotate(0deg);
+              transform: rotate(0deg) translate(-58vw) rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(360deg) translate(-58vw) rotate(-360deg);
+              transform: rotate(360deg) translate(-58vw) rotate(-360deg);
+    }
+  }
 }
 
 @media (min-width: 1366px) and (orientation: landscape) {
@@ -580,6 +748,29 @@ a {
   width: 11%;
 }
 
+@media (min-width: 250px) and (orientation: portrait) {
+  @-webkit-keyframes jupiter {
+    from {
+      -webkit-transform: rotate(0deg) translate(-70vw) rotate(0deg);
+              transform: rotate(0deg) translate(-70vw) rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(360deg) translate(-70vw) rotate(-360deg);
+              transform: rotate(360deg) translate(-70vw) rotate(-360deg);
+    }
+  }
+  @keyframes jupiter {
+    from {
+      -webkit-transform: rotate(0deg) translate(-70vw) rotate(0deg);
+              transform: rotate(0deg) translate(-70vw) rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(360deg) translate(-70vw) rotate(-360deg);
+              transform: rotate(360deg) translate(-70vw) rotate(-360deg);
+    }
+  }
+}
+
 @media (min-width: 1366px) and (orientation: landscape) {
   @-webkit-keyframes jupiter {
     from {
@@ -616,6 +807,29 @@ a {
   width: 9%;
 }
 
+@media (min-width: 250px) and (orientation: portrait) {
+  @-webkit-keyframes saturn {
+    from {
+      -webkit-transform: rotate(0deg) translate(-86vw) rotate(0deg);
+              transform: rotate(0deg) translate(-86vw) rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(360deg) translate(-86vw) rotate(-360deg);
+              transform: rotate(360deg) translate(-86vw) rotate(-360deg);
+    }
+  }
+  @keyframes saturn {
+    from {
+      -webkit-transform: rotate(0deg) translate(-86vw) rotate(0deg);
+              transform: rotate(0deg) translate(-86vw) rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(360deg) translate(-86vw) rotate(-360deg);
+              transform: rotate(360deg) translate(-86vw) rotate(-360deg);
+    }
+  }
+}
+
 @media (min-width: 1366px) and (orientation: landscape) {
   @-webkit-keyframes saturn {
     from {
@@ -650,6 +864,29 @@ a {
           animation: uranus 22s infinite linear;
   z-index: 8;
   width: 13%;
+}
+
+@media (min-width: 250px) and (orientation: portrait) {
+  @-webkit-keyframes uranus {
+    from {
+      -webkit-transform: rotate(0deg) translate(-102vw) rotate(0deg);
+              transform: rotate(0deg) translate(-102vw) rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(360deg) translate(-102vw) rotate(-360deg);
+              transform: rotate(360deg) translate(-102vw) rotate(-360deg);
+    }
+  }
+  @keyframes uranus {
+    from {
+      -webkit-transform: rotate(0deg) translate(-102vw) rotate(0deg);
+              transform: rotate(0deg) translate(-102vw) rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(360deg) translate(-102vw) rotate(-360deg);
+              transform: rotate(360deg) translate(-102vw) rotate(-360deg);
+    }
+  }
 }
 
 @media (min-width: 1366px) and (orientation: landscape) {
@@ -692,6 +929,29 @@ a {
           animation: neptune 28s infinite linear;
   z-index: 9;
   width: 15%;
+}
+
+@media (min-width: 250px) and (orientation: portrait) {
+  @-webkit-keyframes neptune {
+    from {
+      -webkit-transform: rotate(0deg) translate(-124vw) rotate(0deg);
+              transform: rotate(0deg) translate(-124vw) rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(360deg) translate(-124vw) rotate(-360deg);
+              transform: rotate(360deg) translate(-124vw) rotate(-360deg);
+    }
+  }
+  @keyframes neptune {
+    from {
+      -webkit-transform: rotate(0deg) translate(-124vw) rotate(0deg);
+              transform: rotate(0deg) translate(-124vw) rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(360deg) translate(-124vw) rotate(-360deg);
+              transform: rotate(360deg) translate(-124vw) rotate(-360deg);
+    }
+  }
 }
 
 @media (min-width: 1366px) and (orientation: landscape) {

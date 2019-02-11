@@ -11,8 +11,8 @@
   
   //rwd mixin for typography (without orientation)
   @mixin rwd-t($device-width) { 
-    @if map-has-key($devices, $device-width) {
-      @media (min-width: #{map-get($devices, $device-width)}) {
+    @if map-has-key($devices-t, $device-width) {
+      @media (min-width: #{map-get($devices-t, $device-width)}) {
         @content;
       }
     } @else {
@@ -26,7 +26,7 @@
     
     width: calc-width($page-width, $columns);
     
-    @include rwd('small', 'l') {
+    @include rwd('small-p', 'p') {
     margin-left: 2.5%;
     margin-right: 2.5%;
     }
@@ -105,7 +105,7 @@
 
 
 @mixin orbit-animation ($animation-name, $distance, $speed) {
-  @include rwd('small', 'p'){
+  @include rwd('small-p', 'p'){
     @keyframes #{$animation-name} {
       from {
         transform: rotate(0deg)
