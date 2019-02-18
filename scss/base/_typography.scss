@@ -35,3 +35,8 @@ p, a {
   font-family: $roboto; 
   @include vertical-rhythm(1em);
 }
+
+.skill-label h4 {
+  font-weight: 900;
+}
+

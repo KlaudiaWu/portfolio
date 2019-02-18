@@ -28,3 +28,57 @@
       @include grid(2);
     }
   }
+
+// Grid system for "about me" section 
+
+.about-me{
+  @include grid(6);
+  @include rwd ('small-l', 'l') {
+    @include grid(10);
+  }
+  @include rwd('medium-p', 'p') {
+    @include grid(3.5);
+  }
+  @include rwd('large', 'l') {
+    @include grid(2.5);
+  }
+}
+.skills-chart {
+  @include grid(10);
+  @include rwd ('small-l', 'l') {
+    @include grid(10);
+  }
+  @include rwd('medium-p', 'p') {
+    @include grid(7.5);
+  }
+  @include rwd('large', 'l') {
+    @include grid(6);
+  }  
+}
+
+.rwd-container p {
+  @include grid(8);
+  @include rwd('large', 'l') {
+    @include grid(3);
+  }  
+}
+
+// .rwd-tablet {
+//   @include grid(6);
+//   @include rwd('large', 'l') {
+//     @include grid(2.5);
+//   }  
+// }
+
+.hobby-container {
+  @include grid(8);
+  @include rwd ('small-l', 'l') {
+    @include grid(12);
+  }
+  @include rwd('medium-p', 'p') {
+    @include grid(12);
+  }  
+  @include rwd('large', 'l') {
+    @include grid(10);
+  }
+}

@@ -27,8 +27,8 @@
     width: calc-width($page-width, $columns);
     
     @include rwd('small-p', 'p') {
-    margin-left: 2.5%;
-    margin-right: 2.5%;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
     }
     @include rwd('large', 'l') {
       margin-left: 3%;

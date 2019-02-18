@@ -147,6 +147,10 @@ p, a {
   line-height: 1.2;
 }
 
+.skill-label h4 {
+  font-weight: 900;
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -171,6 +175,11 @@ section {
 a {
   color: initial;
   text-decoration: none;
+}
+
+section h1 {
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
 }
 
 .header-bar {
@@ -288,8 +297,8 @@ a {
 
 @media (min-width: 250px) and (orientation: portrait) {
   .logo {
-    margin-left: 2.5%;
-    margin-right: 2.5%;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
   }
 }
 
@@ -308,8 +317,8 @@ a {
 
 @media (min-width: 1024px) and (orientation: landscape) and (min-width: 250px) and (orientation: portrait) {
   .logo {
-    margin-left: 2.5%;
-    margin-right: 2.5%;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
   }
 }
 
@@ -328,8 +337,8 @@ a {
 
 @media (min-width: 1366px) and (orientation: landscape) and (min-width: 250px) and (orientation: portrait) {
   .logo {
-    margin-left: 2.5%;
-    margin-right: 2.5%;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
   }
 }
 
@@ -346,8 +355,8 @@ a {
 
 @media (min-width: 250px) and (orientation: portrait) {
   .menu {
-    margin-left: 2.5%;
-    margin-right: 2.5%;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
   }
 }
 
@@ -366,8 +375,8 @@ a {
 
 @media (min-width: 1024px) and (orientation: landscape) and (min-width: 250px) and (orientation: portrait) {
   .menu {
-    margin-left: 2.5%;
-    margin-right: 2.5%;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
   }
 }
 
@@ -386,8 +395,8 @@ a {
 
 @media (min-width: 1366px) and (orientation: landscape) and (min-width: 250px) and (orientation: portrait) {
   .menu {
-    margin-left: 2.5%;
-    margin-right: 2.5%;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
   }
 }
 
@@ -404,8 +413,8 @@ a {
 
 @media (min-width: 250px) and (orientation: portrait) {
   .socialmedia-bar {
-    margin-left: 2.5%;
-    margin-right: 2.5%;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
   }
 }
 
@@ -424,8 +433,8 @@ a {
 
 @media (min-width: 1024px) and (orientation: landscape) and (min-width: 250px) and (orientation: portrait) {
   .socialmedia-bar {
-    margin-left: 2.5%;
-    margin-right: 2.5%;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
   }
 }
 
@@ -444,13 +453,285 @@ a {
 
 @media (min-width: 1366px) and (orientation: landscape) and (min-width: 250px) and (orientation: portrait) {
   .socialmedia-bar {
-    margin-left: 2.5%;
-    margin-right: 2.5%;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
   }
 }
 
 @media (min-width: 1366px) and (orientation: landscape) and (min-width: 1366px) and (orientation: landscape) {
   .socialmedia-bar {
+    margin-left: 3%;
+    margin-right: 3%;
+  }
+}
+
+.about-me {
+  width: calc(((100vw/12) * 6));
+}
+
+@media (min-width: 250px) and (orientation: portrait) {
+  .about-me {
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+  }
+}
+
+@media (min-width: 1366px) and (orientation: landscape) {
+  .about-me {
+    margin-left: 3%;
+    margin-right: 3%;
+  }
+}
+
+@media (min-width: 500px) and (orientation: landscape) {
+  .about-me {
+    width: calc(((100vw/12) * 10));
+  }
+}
+
+@media (min-width: 500px) and (orientation: landscape) and (min-width: 250px) and (orientation: portrait) {
+  .about-me {
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+  }
+}
+
+@media (min-width: 500px) and (orientation: landscape) and (min-width: 1366px) and (orientation: landscape) {
+  .about-me {
+    margin-left: 3%;
+    margin-right: 3%;
+  }
+}
+
+@media (min-width: 768px) and (orientation: portrait) {
+  .about-me {
+    width: calc(((100vw/12) * 3.5));
+  }
+}
+
+@media (min-width: 768px) and (orientation: portrait) and (min-width: 250px) and (orientation: portrait) {
+  .about-me {
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+  }
+}
+
+@media (min-width: 768px) and (orientation: portrait) and (min-width: 1366px) and (orientation: landscape) {
+  .about-me {
+    margin-left: 3%;
+    margin-right: 3%;
+  }
+}
+
+@media (min-width: 1366px) and (orientation: landscape) {
+  .about-me {
+    width: calc(((100vw/12) * 2.5));
+  }
+}
+
+@media (min-width: 1366px) and (orientation: landscape) and (min-width: 250px) and (orientation: portrait) {
+  .about-me {
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+  }
+}
+
+@media (min-width: 1366px) and (orientation: landscape) and (min-width: 1366px) and (orientation: landscape) {
+  .about-me {
+    margin-left: 3%;
+    margin-right: 3%;
+  }
+}
+
+.skills-chart {
+  width: calc(((100vw/12) * 10));
+}
+
+@media (min-width: 250px) and (orientation: portrait) {
+  .skills-chart {
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+  }
+}
+
+@media (min-width: 1366px) and (orientation: landscape) {
+  .skills-chart {
+    margin-left: 3%;
+    margin-right: 3%;
+  }
+}
+
+@media (min-width: 500px) and (orientation: landscape) {
+  .skills-chart {
+    width: calc(((100vw/12) * 10));
+  }
+}
+
+@media (min-width: 500px) and (orientation: landscape) and (min-width: 250px) and (orientation: portrait) {
+  .skills-chart {
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+  }
+}
+
+@media (min-width: 500px) and (orientation: landscape) and (min-width: 1366px) and (orientation: landscape) {
+  .skills-chart {
+    margin-left: 3%;
+    margin-right: 3%;
+  }
+}
+
+@media (min-width: 768px) and (orientation: portrait) {
+  .skills-chart {
+    width: calc(((100vw/12) * 7.5));
+  }
+}
+
+@media (min-width: 768px) and (orientation: portrait) and (min-width: 250px) and (orientation: portrait) {
+  .skills-chart {
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+  }
+}
+
+@media (min-width: 768px) and (orientation: portrait) and (min-width: 1366px) and (orientation: landscape) {
+  .skills-chart {
+    margin-left: 3%;
+    margin-right: 3%;
+  }
+}
+
+@media (min-width: 1366px) and (orientation: landscape) {
+  .skills-chart {
+    width: calc(((100vw/12) * 6));
+  }
+}
+
+@media (min-width: 1366px) and (orientation: landscape) and (min-width: 250px) and (orientation: portrait) {
+  .skills-chart {
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+  }
+}
+
+@media (min-width: 1366px) and (orientation: landscape) and (min-width: 1366px) and (orientation: landscape) {
+  .skills-chart {
+    margin-left: 3%;
+    margin-right: 3%;
+  }
+}
+
+.rwd-container p {
+  width: calc(((100vw/12) * 8));
+}
+
+@media (min-width: 250px) and (orientation: portrait) {
+  .rwd-container p {
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+  }
+}
+
+@media (min-width: 1366px) and (orientation: landscape) {
+  .rwd-container p {
+    margin-left: 3%;
+    margin-right: 3%;
+  }
+}
+
+@media (min-width: 1366px) and (orientation: landscape) {
+  .rwd-container p {
+    width: calc(((100vw/12) * 3));
+  }
+}
+
+@media (min-width: 1366px) and (orientation: landscape) and (min-width: 250px) and (orientation: portrait) {
+  .rwd-container p {
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+  }
+}
+
+@media (min-width: 1366px) and (orientation: landscape) and (min-width: 1366px) and (orientation: landscape) {
+  .rwd-container p {
+    margin-left: 3%;
+    margin-right: 3%;
+  }
+}
+
+.hobby-container {
+  width: calc(((100vw/12) * 8));
+}
+
+@media (min-width: 250px) and (orientation: portrait) {
+  .hobby-container {
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+  }
+}
+
+@media (min-width: 1366px) and (orientation: landscape) {
+  .hobby-container {
+    margin-left: 3%;
+    margin-right: 3%;
+  }
+}
+
+@media (min-width: 500px) and (orientation: landscape) {
+  .hobby-container {
+    width: calc(((100vw/12) * 12));
+  }
+}
+
+@media (min-width: 500px) and (orientation: landscape) and (min-width: 250px) and (orientation: portrait) {
+  .hobby-container {
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+  }
+}
+
+@media (min-width: 500px) and (orientation: landscape) and (min-width: 1366px) and (orientation: landscape) {
+  .hobby-container {
+    margin-left: 3%;
+    margin-right: 3%;
+  }
+}
+
+@media (min-width: 768px) and (orientation: portrait) {
+  .hobby-container {
+    width: calc(((100vw/12) * 12));
+  }
+}
+
+@media (min-width: 768px) and (orientation: portrait) and (min-width: 250px) and (orientation: portrait) {
+  .hobby-container {
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+  }
+}
+
+@media (min-width: 768px) and (orientation: portrait) and (min-width: 1366px) and (orientation: landscape) {
+  .hobby-container {
+    margin-left: 3%;
+    margin-right: 3%;
+  }
+}
+
+@media (min-width: 1366px) and (orientation: landscape) {
+  .hobby-container {
+    width: calc(((100vw/12) * 10));
+  }
+}
+
+@media (min-width: 1366px) and (orientation: landscape) and (min-width: 250px) and (orientation: portrait) {
+  .hobby-container {
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+  }
+}
+
+@media (min-width: 1366px) and (orientation: landscape) and (min-width: 1366px) and (orientation: landscape) {
+  .hobby-container {
     margin-left: 3%;
     margin-right: 3%;
   }
@@ -993,5 +1274,433 @@ a {
 .jupiter:hover, .saturn:hover, .uranus:hover, .neptune:hover {
   -webkit-animation-play-state: paused;
           animation-play-state: paused;
+}
+
+section.about-me-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.about-me-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media (min-width: 500px) and (orientation: landscape) {
+  .about-me-container .about-me {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media (min-width: 768px) and (orientation: portrait) {
+  .about-me-container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+@media (min-width: 1024px) and (orientation: landscape) {
+  .about-me-container .about-me {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media (min-width: 1366px) and (orientation: landscape) {
+  .about-me-container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .about-me-container .about-me {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.klaudia-img {
+  border-radius: 50%;
+  border: solid white 4px;
+  margin-bottom: 25px;
+  width: 100%;
+}
+
+@media (min-width: 500px) and (orientation: landscape) {
+  .klaudia-img {
+    width: 40%;
+  }
+}
+
+@media (min-width: 1024px) and (orientation: landscape) {
+  .klaudia-img {
+    width: 30%;
+  }
+}
+
+@media (min-width: 1366px) and (orientation: landscape) {
+  .klaudia-img {
+    width: 100%;
+  }
+}
+
+.about-me-text {
+  margin-bottom: 25px;
+}
+
+@media (min-width: 500px) and (orientation: landscape) {
+  .about-me-text {
+    width: 50%;
+    margin-left: 20%;
+  }
+}
+
+@media (min-width: 768px) and (orientation: portrait) {
+  .about-me-text {
+    text-align: left;
+  }
+}
+
+@media (min-width: 500px) and (orientation: landscape) {
+  .about-me-text {
+    width: 55%;
+    margin-left: 5%;
+  }
+}
+
+@media (min-width: 1366px) and (orientation: landscape) {
+  .about-me-text {
+    text-align: left;
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+.skill-container {
+  width: 100%;
+  height: 5vh;
+  border: solid white 2px;
+  margin-bottom: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media (min-width: 500px) and (orientation: landscape) {
+  .skill-container {
+    height: 10vh;
+  }
+}
+
+@media (min-width: 1024px) and (orientation: landscape) {
+  .skill-container {
+    height: 7vh;
+  }
+}
+
+@media (min-width: 1366px) and (orientation: landscape) {
+  .skill-container {
+    height: 5vh;
+  }
+}
+
+.skill-label {
+  height: 100%;
+  width: 30%;
+  background-color: white;
+  color: #000000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.skill-tank {
+  width: 70%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.skill-tank p {
+  margin-right: 2%;
+}
+
+.skill-percent {
+  background-color: rgba(255, 255, 255, 0.7);
+  height: 100%;
+}
+
+.skill-percent.html5 {
+  width: 90%;
+}
+
+.skill-percent.css3 {
+  width: 80%;
+}
+
+.skill-percent.js {
+  width: 50%;
+}
+
+.skill-percent.jquery {
+  width: 60%;
+}
+
+.skill-percent.git {
+  width: 60%;
+}
+
+.skill-percent.sass {
+  width: 70%;
+}
+
+.skill-percent.ux {
+  width: 60%;
+}
+
+.rwd-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (min-width: 250px) and (orientation: portrait) {
+  .rwd-monitor {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) and (orientation: portrait) {
+  .rwd-monitor {
+    display: block;
+    width: 60vw;
+  }
+}
+
+.rwd-tablet {
+  width: 60vw;
+}
+
+@media (min-width: 768px) and (orientation: portrait) {
+  .rwd-tablet {
+    width: 20vw;
+  }
+}
+
+@media (min-width: 250px) and (orientation: portrait) {
+  .rwd-smartphone {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) and (orientation: portrait) {
+  .rwd-smartphone {
+    display: block;
+    width: 10vw;
+  }
+}
+
+.hobby-container {
+  margin-top: 25px;
+}
+
+@media (min-width: 500px) and (orientation: landscape) {
+  .hobby-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+  }
+}
+
+@media (min-width: 768px) and (orientation: portrait) {
+  .hobby-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+  }
+}
+
+@media (min-width: 1366px) and (orientation: landscape) {
+  .hobby-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+  }
+}
+
+.about-me-hobby {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.hobby {
+  margin-bottom: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.hobby img {
+  width: 50%;
+  margin-bottom: 25px;
+}
+
+@media (min-width: 500px) and (orientation: landscape) {
+  .hobby {
+    width: 30%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media (min-width: 768px) and (orientation: portrait) {
+  .hobby {
+    width: 30%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media (min-width: 1366px) and (orientation: landscape) {
+  .hobby {
+    width: 25%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 /*# sourceMappingURL=main.css.map */
