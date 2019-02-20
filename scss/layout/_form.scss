@@ -1,0 +1,58 @@
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input, textarea {
+  width: 100%;
+  border-radius: 10px;
+  border: solid white 2px;
+  background-color: transparent;
+  color: white;
+  margin-bottom: 3vh;
+  padding: 5%;
+
+  @include rwd ('small-l', "l") {
+    padding: 2%;
+  }
+  @include rwd ('medium-p', 'p') {
+    padding: 3%;
+  }
+  @include rwd ('large', "l") {
+    margin-bottom: 2vh;
+    border-radius: 15px;
+    padding: 1%;
+  }
+}
+
+input {
+  height: 10vh;
+  @include rwd ('small-l', "l") {
+    height: 15vh;
+  }
+  @include rwd ('medium-p', 'p') {
+    height: 7vh;
+  }
+  @include rwd ('medium-l', 'l') {
+    height: 8vh;  
+  }
+  @include rwd ('large', "l") {
+    height: 6vh;
+  }
+}
+textarea {
+  height: 30vh;
+  @include rwd ('small-l', "l") {
+    height: 50vh;
+  }
+  @include rwd ('medium-p', 'p') {
+    height: 25vh;
+  }
+  @include rwd ('medium-l', 'l') {
+    height: 25vh;
+  }
+  @include rwd ('large', "l") {
+    height: 20vh;
+  }
+}

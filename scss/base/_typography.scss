@@ -26,12 +26,17 @@ h3 {
   @include vertical-rhythm(1.5em);  
 }
 
+input[type=submit] {
+  font-family: $roboto;  
+  @include vertical-rhythm(1.5em); 
+}
+
 h4 {
   font-family: $roboto; 
   @include vertical-rhythm(1em);  
 }
 
-p, a {
+p, a, textarea {
   font-family: $roboto; 
   @include vertical-rhythm(1em);
 }

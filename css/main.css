@@ -135,13 +135,19 @@ h3 {
   line-height: 1.5;
 }
 
+input[type=submit] {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.5em;
+  line-height: 1.5;
+}
+
 h4 {
   font-family: "Roboto", sans-serif;
   font-size: 1em;
   line-height: 1.2;
 }
 
-p, a {
+p, a, textarea {
   font-family: "Roboto", sans-serif;
   font-size: 1em;
   line-height: 1.2;
@@ -732,6 +738,84 @@ section h1 {
 
 @media (min-width: 1366px) and (orientation: landscape) and (min-width: 1366px) and (orientation: landscape) {
   .hobby-container {
+    margin-left: 3%;
+    margin-right: 3%;
+  }
+}
+
+form {
+  width: calc(((100vw/12) * 11));
+}
+
+@media (min-width: 250px) and (orientation: portrait) {
+  form {
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+  }
+}
+
+@media (min-width: 1366px) and (orientation: landscape) {
+  form {
+    margin-left: 3%;
+    margin-right: 3%;
+  }
+}
+
+@media (min-width: 500px) and (orientation: landscape) {
+  form {
+    width: calc(((100vw/12) * 10));
+  }
+}
+
+@media (min-width: 500px) and (orientation: landscape) and (min-width: 250px) and (orientation: portrait) {
+  form {
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+  }
+}
+
+@media (min-width: 500px) and (orientation: landscape) and (min-width: 1366px) and (orientation: landscape) {
+  form {
+    margin-left: 3%;
+    margin-right: 3%;
+  }
+}
+
+@media (min-width: 768px) and (orientation: portrait) {
+  form {
+    width: calc(((100vw/12) * 12));
+  }
+}
+
+@media (min-width: 768px) and (orientation: portrait) and (min-width: 250px) and (orientation: portrait) {
+  form {
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+  }
+}
+
+@media (min-width: 768px) and (orientation: portrait) and (min-width: 1366px) and (orientation: landscape) {
+  form {
+    margin-left: 3%;
+    margin-right: 3%;
+  }
+}
+
+@media (min-width: 1366px) and (orientation: landscape) {
+  form {
+    width: calc(((100vw/12) * 8.5));
+  }
+}
+
+@media (min-width: 1366px) and (orientation: landscape) and (min-width: 250px) and (orientation: portrait) {
+  form {
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+  }
+}
+
+@media (min-width: 1366px) and (orientation: landscape) and (min-width: 1366px) and (orientation: landscape) {
+  form {
     margin-left: 3%;
     margin-right: 3%;
   }
@@ -1701,6 +1785,179 @@ section.about-me-section {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+}
+
+.contact-section {
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.submit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.submit input[type=submit] {
+  margin-top: 3vh;
+}
+
+@media (min-width: 768px) and (orientation: portrait) {
+  .submit {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .submit input[type=submit] {
+    height: 80%;
+    margin-left: 2vw;
+    margin-top: 1vh;
+  }
+}
+
+@media (min-width: 1024px) and (orientation: landscape) {
+  .submit {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .submit input[type=submit] {
+    height: 80%;
+    margin-left: 2vw;
+    margin-top: 1vh;
+  }
+}
+
+@media (min-width: 1366px) and (orientation: landscape) {
+  .submit {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .submit input[type=submit] {
+    height: 100%;
+    margin-left: 2vw;
+    margin-top: 2vh;
+  }
+}
+
+form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+input, textarea {
+  width: 100%;
+  border-radius: 10px;
+  border: solid white 2px;
+  background-color: transparent;
+  color: white;
+  margin-bottom: 3vh;
+  padding: 5%;
+}
+
+@media (min-width: 500px) and (orientation: landscape) {
+  input, textarea {
+    padding: 2%;
+  }
+}
+
+@media (min-width: 768px) and (orientation: portrait) {
+  input, textarea {
+    padding: 3%;
+  }
+}
+
+@media (min-width: 1366px) and (orientation: landscape) {
+  input, textarea {
+    margin-bottom: 2vh;
+    border-radius: 15px;
+    padding: 1%;
+  }
+}
+
+input {
+  height: 10vh;
+}
+
+@media (min-width: 500px) and (orientation: landscape) {
+  input {
+    height: 15vh;
+  }
+}
+
+@media (min-width: 768px) and (orientation: portrait) {
+  input {
+    height: 7vh;
+  }
+}
+
+@media (min-width: 1024px) and (orientation: landscape) {
+  input {
+    height: 8vh;
+  }
+}
+
+@media (min-width: 1366px) and (orientation: landscape) {
+  input {
+    height: 6vh;
+  }
+}
+
+textarea {
+  height: 30vh;
+}
+
+@media (min-width: 500px) and (orientation: landscape) {
+  textarea {
+    height: 50vh;
+  }
+}
+
+@media (min-width: 768px) and (orientation: portrait) {
+  textarea {
+    height: 25vh;
+  }
+}
+
+@media (min-width: 1024px) and (orientation: landscape) {
+  textarea {
+    height: 25vh;
+  }
+}
+
+@media (min-width: 1366px) and (orientation: landscape) {
+  textarea {
+    height: 20vh;
   }
 }
 /*# sourceMappingURL=main.css.map */
