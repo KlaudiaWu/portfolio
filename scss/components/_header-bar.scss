@@ -45,36 +45,3 @@
   }
 }
 
-.socialmedia-bar {
-  height: 10vh;
-  a {
-    display: block;
-    align-self: center;
-      img {
-        height: 50px;
-        width: auto;
-      }
-  }
-
-  @include rwd('small-p', 'p') {
-    width: 100vw;
-    margin: 0;
-    position: absolute;
-    top: 85vh;
-    justify-content: center;
-    a {
-      margin: 0 1.5vw 0 1.5vw;
-    }
-  }
-  @include rwd('large', 'l') {
-    width: initial;
-    position: unset;
-    margin-right: 3%;
-    a {
-      margin: 0 1vw 0 1vw; 
-      img {
-        height: 70px;
-      }
-    }
-  }
-}

@@ -97,3 +97,18 @@ form {
     @include grid(8.5);
   }
 }
+
+// Grid system for footer section
+
+.contact-container {
+  @include grid(11);
+  @include rwd ('small-l', 'l') {
+    @include grid(12);
+  }
+  @include rwd('medium-p', 'p') {
+    @include grid(12);
+  }
+  @include rwd('large', 'l') {
+    @include grid(8.5);
+  }
+}

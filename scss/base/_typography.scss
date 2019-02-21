@@ -39,6 +39,7 @@ h4 {
 p, a, textarea {
   font-family: $roboto; 
   @include vertical-rhythm(1em);
+  color: $white;
 }
 
 .skill-label h4 {
