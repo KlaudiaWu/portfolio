@@ -1,33 +1,21 @@
 // Grid system for header section 
-.logo {
-  @include grid(7);
-  @include rwd('medium-l', 'l') {
-      @include grid(4);
-    }
-  @include rwd('large', 'l') {
-      @include grid(2.5);
+.logo-bar {
+  @include rwd('small-l', 'l') {
+    @include grid(7);
   }
 }
-  
-.menu {
-  @include grid(2);
-  @include rwd('medium-l', 'l') {
-      @include grid(1.5);
-    }
-  @include rwd('large', 'l') {
-      @include grid(0.6);
-    }
-  }
-  
 .socialmedia-bar {
   @include grid(12);
-  @include rwd('medium-l', 'l') {
-      @include grid(3);
-    }
-  @include rwd('large', 'l') {
-      @include grid(2);
-    }
+  @include rwd('small-l', 'l') {
+    @include grid(3);
   }
+  @include rwd('medium-l', 'l') {
+    @include grid(3);
+  }
+  @include rwd('large', 'l') {
+    @include grid(2);
+  }
+}
 
 // Grid system for "about me" section 
 

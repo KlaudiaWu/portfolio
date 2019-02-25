@@ -119,6 +119,20 @@
       }
     }
   }
+  @include rwd('small-l', 'l'){
+    @keyframes #{$animation-name} {
+      from {
+        transform: rotate(0deg)
+                  translate(-$distance/1.1)
+                  rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg)
+                  translate(-$distance/1.1)
+                  rotate(-360deg);
+      }
+    }
+  }
   @include rwd('large', 'l'){
     @keyframes #{$animation-name} {
       from {

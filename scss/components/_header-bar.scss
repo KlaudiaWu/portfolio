@@ -11,36 +11,69 @@
 
 
 .header-bar {
-  @include rwd('large', 'l') {
+  @include rwd('small-p', 'p') {
+    width: 100%;
+  }
+  @include rwd('small-l', 'l') {
     width: 100vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: 5%;
   }
+  @include rwd('large', 'l') {
+    margin-top: 3%;
+  }
+
 }
 
 .logo-bar{
   .logo {
-    height: auto;
+    width: 65%;
   }
   .menu {
-    height: auto;
+    width: 20%;
     align-self: center;
   }
+  
   @include rwd('small-p', 'p') {
     .menu {
       margin: 0 5vw;
     }
   }
+  @include rwd('small-l', 'l') {
+    width: 100%;
+    .logo {
+      width: 35%;
+      position: absolute;
+      align-self: center;
+      left: 32%;
+    }
+    .menu {
+      width: 15%;
+      margin-left: 5%;
+    }
+  }
+  @include rwd('medium-p', 'p') {
+    .logo {
+      width: 55%;
+    }
+    .menu {
+      width: 15%;
+    }
+  }
   @include rwd('large', 'l') {
     width: unset;
     .logo {
+      width: 25%;
       position: absolute;
       align-self: center;
-      left: 35%;
+      left: 37%;
     }
     .menu {
+      width: 5%;
       position: fixed;
+      margin-left: 0;
     }
   }
 }

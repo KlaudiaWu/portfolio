@@ -205,7 +205,13 @@ section h1 {
           flex-direction: row;
 }
 
-@media (min-width: 1366px) and (orientation: landscape) {
+@media (min-width: 250px) and (orientation: portrait) {
+  .header-bar {
+    width: 100%;
+  }
+}
+
+@media (min-width: 500px) and (orientation: landscape) {
   .header-bar {
     width: 100vw;
     display: -webkit-box;
@@ -217,15 +223,22 @@ section h1 {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    margin-top: 5%;
+  }
+}
+
+@media (min-width: 1366px) and (orientation: landscape) {
+  .header-bar {
+    margin-top: 3%;
   }
 }
 
 .logo-bar .logo {
-  height: auto;
+  width: 65%;
 }
 
 .logo-bar .menu {
-  height: auto;
+  width: 20%;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
@@ -237,19 +250,49 @@ section h1 {
   }
 }
 
+@media (min-width: 500px) and (orientation: landscape) {
+  .logo-bar {
+    width: 100%;
+  }
+  .logo-bar .logo {
+    width: 35%;
+    position: absolute;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    left: 32%;
+  }
+  .logo-bar .menu {
+    width: 15%;
+    margin-left: 5%;
+  }
+}
+
+@media (min-width: 768px) and (orientation: portrait) {
+  .logo-bar .logo {
+    width: 55%;
+  }
+  .logo-bar .menu {
+    width: 15%;
+  }
+}
+
 @media (min-width: 1366px) and (orientation: landscape) {
   .logo-bar {
     width: unset;
   }
   .logo-bar .logo {
+    width: 25%;
     position: absolute;
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;
-    left: 35%;
+    left: 37%;
   }
   .logo-bar .menu {
+    width: 5%;
     position: fixed;
+    margin-left: 0;
   }
 }
 
@@ -284,6 +327,18 @@ section h1 {
   }
 }
 
+@media (min-width: 500px) and (orientation: landscape) {
+  .socialmedia-bar a {
+    margin: 0 0.5vw 0 0.5vw;
+  }
+}
+
+@media (min-width: 1024px) and (orientation: landscape) {
+  .socialmedia-bar a {
+    margin: 0 1vw 0 1vw;
+  }
+}
+
 @media (min-width: 1366px) and (orientation: landscape) {
   .socialmedia-bar {
     width: initial;
@@ -310,117 +365,21 @@ section h1 {
   margin: 50px 0 25px 0;
 }
 
-.logo {
-  width: calc(((100vw/12) * 7));
+@media (min-width: 500px) and (orientation: landscape) {
+  .logo-bar {
+    width: calc(((100vw/12) * 7));
+  }
 }
 
-@media (min-width: 250px) and (orientation: portrait) {
-  .logo {
+@media (min-width: 500px) and (orientation: landscape) and (min-width: 250px) and (orientation: portrait) {
+  .logo-bar {
     padding-left: 2.5%;
     padding-right: 2.5%;
   }
 }
 
-@media (min-width: 1366px) and (orientation: landscape) {
-  .logo {
-    margin-left: 3%;
-    margin-right: 3%;
-  }
-}
-
-@media (min-width: 1024px) and (orientation: landscape) {
-  .logo {
-    width: calc(((100vw/12) * 4));
-  }
-}
-
-@media (min-width: 1024px) and (orientation: landscape) and (min-width: 250px) and (orientation: portrait) {
-  .logo {
-    padding-left: 2.5%;
-    padding-right: 2.5%;
-  }
-}
-
-@media (min-width: 1024px) and (orientation: landscape) and (min-width: 1366px) and (orientation: landscape) {
-  .logo {
-    margin-left: 3%;
-    margin-right: 3%;
-  }
-}
-
-@media (min-width: 1366px) and (orientation: landscape) {
-  .logo {
-    width: calc(((100vw/12) * 2.5));
-  }
-}
-
-@media (min-width: 1366px) and (orientation: landscape) and (min-width: 250px) and (orientation: portrait) {
-  .logo {
-    padding-left: 2.5%;
-    padding-right: 2.5%;
-  }
-}
-
-@media (min-width: 1366px) and (orientation: landscape) and (min-width: 1366px) and (orientation: landscape) {
-  .logo {
-    margin-left: 3%;
-    margin-right: 3%;
-  }
-}
-
-.menu {
-  width: calc(((100vw/12) * 2));
-}
-
-@media (min-width: 250px) and (orientation: portrait) {
-  .menu {
-    padding-left: 2.5%;
-    padding-right: 2.5%;
-  }
-}
-
-@media (min-width: 1366px) and (orientation: landscape) {
-  .menu {
-    margin-left: 3%;
-    margin-right: 3%;
-  }
-}
-
-@media (min-width: 1024px) and (orientation: landscape) {
-  .menu {
-    width: calc(((100vw/12) * 1.5));
-  }
-}
-
-@media (min-width: 1024px) and (orientation: landscape) and (min-width: 250px) and (orientation: portrait) {
-  .menu {
-    padding-left: 2.5%;
-    padding-right: 2.5%;
-  }
-}
-
-@media (min-width: 1024px) and (orientation: landscape) and (min-width: 1366px) and (orientation: landscape) {
-  .menu {
-    margin-left: 3%;
-    margin-right: 3%;
-  }
-}
-
-@media (min-width: 1366px) and (orientation: landscape) {
-  .menu {
-    width: calc(((100vw/12) * 0.6));
-  }
-}
-
-@media (min-width: 1366px) and (orientation: landscape) and (min-width: 250px) and (orientation: portrait) {
-  .menu {
-    padding-left: 2.5%;
-    padding-right: 2.5%;
-  }
-}
-
-@media (min-width: 1366px) and (orientation: landscape) and (min-width: 1366px) and (orientation: landscape) {
-  .menu {
+@media (min-width: 500px) and (orientation: landscape) and (min-width: 1366px) and (orientation: landscape) {
+  .logo-bar {
     margin-left: 3%;
     margin-right: 3%;
   }
@@ -438,6 +397,26 @@ section h1 {
 }
 
 @media (min-width: 1366px) and (orientation: landscape) {
+  .socialmedia-bar {
+    margin-left: 3%;
+    margin-right: 3%;
+  }
+}
+
+@media (min-width: 500px) and (orientation: landscape) {
+  .socialmedia-bar {
+    width: calc(((100vw/12) * 3));
+  }
+}
+
+@media (min-width: 500px) and (orientation: landscape) and (min-width: 250px) and (orientation: portrait) {
+  .socialmedia-bar {
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+  }
+}
+
+@media (min-width: 500px) and (orientation: landscape) and (min-width: 1366px) and (orientation: landscape) {
   .socialmedia-bar {
     margin-left: 3%;
     margin-right: 3%;
@@ -955,6 +934,12 @@ form {
   margin: 0 10%;
 }
 
+@media (min-width: 500px) and (orientation: landscape) {
+  .solar-system .sun {
+    width: 26%;
+  }
+}
+
 @media (min-width: 1366px) and (orientation: landscape) {
   .solar-system .sun {
     width: 18%;
@@ -987,6 +972,29 @@ form {
     to {
       -webkit-transform: rotate(360deg) translate(-32vw) rotate(-360deg);
               transform: rotate(360deg) translate(-32vw) rotate(-360deg);
+    }
+  }
+}
+
+@media (min-width: 500px) and (orientation: landscape) {
+  @-webkit-keyframes mercury {
+    from {
+      -webkit-transform: rotate(0deg) translate(-29.09091vw) rotate(0deg);
+              transform: rotate(0deg) translate(-29.09091vw) rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(360deg) translate(-29.09091vw) rotate(-360deg);
+              transform: rotate(360deg) translate(-29.09091vw) rotate(-360deg);
+    }
+  }
+  @keyframes mercury {
+    from {
+      -webkit-transform: rotate(0deg) translate(-29.09091vw) rotate(0deg);
+              transform: rotate(0deg) translate(-29.09091vw) rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(360deg) translate(-29.09091vw) rotate(-360deg);
+              transform: rotate(360deg) translate(-29.09091vw) rotate(-360deg);
     }
   }
 }
@@ -1050,6 +1058,29 @@ form {
   }
 }
 
+@media (min-width: 500px) and (orientation: landscape) {
+  @-webkit-keyframes venus {
+    from {
+      -webkit-transform: rotate(0deg) translate(-36.36364vw) rotate(0deg);
+              transform: rotate(0deg) translate(-36.36364vw) rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(360deg) translate(-36.36364vw) rotate(-360deg);
+              transform: rotate(360deg) translate(-36.36364vw) rotate(-360deg);
+    }
+  }
+  @keyframes venus {
+    from {
+      -webkit-transform: rotate(0deg) translate(-36.36364vw) rotate(0deg);
+              transform: rotate(0deg) translate(-36.36364vw) rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(360deg) translate(-36.36364vw) rotate(-360deg);
+              transform: rotate(360deg) translate(-36.36364vw) rotate(-360deg);
+    }
+  }
+}
+
 @media (min-width: 1366px) and (orientation: landscape) {
   @-webkit-keyframes venus {
     from {
@@ -1105,6 +1136,29 @@ form {
     to {
       -webkit-transform: rotate(360deg) translate(-49vw) rotate(-360deg);
               transform: rotate(360deg) translate(-49vw) rotate(-360deg);
+    }
+  }
+}
+
+@media (min-width: 500px) and (orientation: landscape) {
+  @-webkit-keyframes earth {
+    from {
+      -webkit-transform: rotate(0deg) translate(-44.54545vw) rotate(0deg);
+              transform: rotate(0deg) translate(-44.54545vw) rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(360deg) translate(-44.54545vw) rotate(-360deg);
+              transform: rotate(360deg) translate(-44.54545vw) rotate(-360deg);
+    }
+  }
+  @keyframes earth {
+    from {
+      -webkit-transform: rotate(0deg) translate(-44.54545vw) rotate(0deg);
+              transform: rotate(0deg) translate(-44.54545vw) rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(360deg) translate(-44.54545vw) rotate(-360deg);
+              transform: rotate(360deg) translate(-44.54545vw) rotate(-360deg);
     }
   }
 }
@@ -1168,6 +1222,29 @@ form {
   }
 }
 
+@media (min-width: 500px) and (orientation: landscape) {
+  @-webkit-keyframes mars {
+    from {
+      -webkit-transform: rotate(0deg) translate(-52.72727vw) rotate(0deg);
+              transform: rotate(0deg) translate(-52.72727vw) rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(360deg) translate(-52.72727vw) rotate(-360deg);
+              transform: rotate(360deg) translate(-52.72727vw) rotate(-360deg);
+    }
+  }
+  @keyframes mars {
+    from {
+      -webkit-transform: rotate(0deg) translate(-52.72727vw) rotate(0deg);
+              transform: rotate(0deg) translate(-52.72727vw) rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(360deg) translate(-52.72727vw) rotate(-360deg);
+              transform: rotate(360deg) translate(-52.72727vw) rotate(-360deg);
+    }
+  }
+}
+
 @media (min-width: 1366px) and (orientation: landscape) {
   @-webkit-keyframes mars {
     from {
@@ -1188,6 +1265,19 @@ form {
       -webkit-transform: rotate(360deg) translate(-22.30769vw) rotate(-360deg);
               transform: rotate(360deg) translate(-22.30769vw) rotate(-360deg);
     }
+  }
+}
+
+@media (min-width: 500px) and (orientation: landscape) {
+  .solar-system .mars {
+    display: none;
+  }
+}
+
+@media (min-width: 1024px) and (orientation: landscape) {
+  .solar-system .mars {
+    display: block;
+    width: 5%;
   }
 }
 
@@ -1227,6 +1317,29 @@ form {
   }
 }
 
+@media (min-width: 500px) and (orientation: landscape) {
+  @-webkit-keyframes jupiter {
+    from {
+      -webkit-transform: rotate(0deg) translate(-63.63636vw) rotate(0deg);
+              transform: rotate(0deg) translate(-63.63636vw) rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(360deg) translate(-63.63636vw) rotate(-360deg);
+              transform: rotate(360deg) translate(-63.63636vw) rotate(-360deg);
+    }
+  }
+  @keyframes jupiter {
+    from {
+      -webkit-transform: rotate(0deg) translate(-63.63636vw) rotate(0deg);
+              transform: rotate(0deg) translate(-63.63636vw) rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(360deg) translate(-63.63636vw) rotate(-360deg);
+              transform: rotate(360deg) translate(-63.63636vw) rotate(-360deg);
+    }
+  }
+}
+
 @media (min-width: 1366px) and (orientation: landscape) {
   @-webkit-keyframes jupiter {
     from {
@@ -1247,6 +1360,19 @@ form {
       -webkit-transform: rotate(360deg) translate(-26.92308vw) rotate(-360deg);
               transform: rotate(360deg) translate(-26.92308vw) rotate(-360deg);
     }
+  }
+}
+
+@media (min-width: 500px) and (orientation: landscape) {
+  .solar-system .jupiter {
+    display: none;
+  }
+}
+
+@media (min-width: 1024px) and (orientation: landscape) {
+  .solar-system .jupiter {
+    display: block;
+    width: 8%;
   }
 }
 
@@ -1286,6 +1412,29 @@ form {
   }
 }
 
+@media (min-width: 500px) and (orientation: landscape) {
+  @-webkit-keyframes saturn {
+    from {
+      -webkit-transform: rotate(0deg) translate(-78.18182vw) rotate(0deg);
+              transform: rotate(0deg) translate(-78.18182vw) rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(360deg) translate(-78.18182vw) rotate(-360deg);
+              transform: rotate(360deg) translate(-78.18182vw) rotate(-360deg);
+    }
+  }
+  @keyframes saturn {
+    from {
+      -webkit-transform: rotate(0deg) translate(-78.18182vw) rotate(0deg);
+              transform: rotate(0deg) translate(-78.18182vw) rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(360deg) translate(-78.18182vw) rotate(-360deg);
+              transform: rotate(360deg) translate(-78.18182vw) rotate(-360deg);
+    }
+  }
+}
+
 @media (min-width: 1366px) and (orientation: landscape) {
   @-webkit-keyframes saturn {
     from {
@@ -1306,6 +1455,19 @@ form {
       -webkit-transform: rotate(360deg) translate(-33.07692vw) rotate(-360deg);
               transform: rotate(360deg) translate(-33.07692vw) rotate(-360deg);
     }
+  }
+}
+
+@media (min-width: 500px) and (orientation: landscape) {
+  .solar-system .saturn {
+    display: none;
+  }
+}
+
+@media (min-width: 1024px) and (orientation: landscape) {
+  .solar-system .saturn {
+    display: block;
+    width: 5%;
   }
 }
 
@@ -1345,6 +1507,29 @@ form {
   }
 }
 
+@media (min-width: 500px) and (orientation: landscape) {
+  @-webkit-keyframes uranus {
+    from {
+      -webkit-transform: rotate(0deg) translate(-92.72727vw) rotate(0deg);
+              transform: rotate(0deg) translate(-92.72727vw) rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(360deg) translate(-92.72727vw) rotate(-360deg);
+              transform: rotate(360deg) translate(-92.72727vw) rotate(-360deg);
+    }
+  }
+  @keyframes uranus {
+    from {
+      -webkit-transform: rotate(0deg) translate(-92.72727vw) rotate(0deg);
+              transform: rotate(0deg) translate(-92.72727vw) rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(360deg) translate(-92.72727vw) rotate(-360deg);
+              transform: rotate(360deg) translate(-92.72727vw) rotate(-360deg);
+    }
+  }
+}
+
 @media (min-width: 1366px) and (orientation: landscape) {
   @-webkit-keyframes uranus {
     from {
@@ -1371,6 +1556,19 @@ form {
 @media (min-width: 250px) and (orientation: portrait) {
   .solar-system .uranus {
     display: none;
+  }
+}
+
+@media (min-width: 500px) and (orientation: landscape) {
+  .solar-system .uranus {
+    display: none;
+  }
+}
+
+@media (min-width: 1024px) and (orientation: landscape) {
+  .solar-system .uranus {
+    display: block;
+    width: 8%;
   }
 }
 
@@ -1410,6 +1608,29 @@ form {
   }
 }
 
+@media (min-width: 500px) and (orientation: landscape) {
+  @-webkit-keyframes neptune {
+    from {
+      -webkit-transform: rotate(0deg) translate(-112.72727vw) rotate(0deg);
+              transform: rotate(0deg) translate(-112.72727vw) rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(360deg) translate(-112.72727vw) rotate(-360deg);
+              transform: rotate(360deg) translate(-112.72727vw) rotate(-360deg);
+    }
+  }
+  @keyframes neptune {
+    from {
+      -webkit-transform: rotate(0deg) translate(-112.72727vw) rotate(0deg);
+              transform: rotate(0deg) translate(-112.72727vw) rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(360deg) translate(-112.72727vw) rotate(-360deg);
+              transform: rotate(360deg) translate(-112.72727vw) rotate(-360deg);
+    }
+  }
+}
+
 @media (min-width: 1366px) and (orientation: landscape) {
   @-webkit-keyframes neptune {
     from {
@@ -1439,8 +1660,15 @@ form {
   }
 }
 
+@media (min-width: 500px) and (orientation: landscape) {
+  .solar-system .neptune {
+    display: none;
+  }
+}
+
 @media (min-width: 1366px) and (orientation: landscape) {
   .solar-system .neptune {
+    display: block;
     width: 8%;
   }
 }

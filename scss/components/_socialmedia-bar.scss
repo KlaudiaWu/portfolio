@@ -19,6 +19,16 @@
         margin: 0 1.5vw 0 1.5vw;
       }
     }
+    @include rwd ('small-l', 'l') {
+      a {
+        margin: 0 0.5vw 0 0.5vw;
+      }
+    }
+    @include rwd ('medium-l', 'l') {
+      a {
+        margin: 0 1vw 0 1vw;
+      }
+    }
     @include rwd('large', 'l') {
       width: initial;
       position: unset;

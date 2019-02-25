@@ -29,10 +29,14 @@
       margin: 0 10%;
     }
 
+    @include rwd('small-l', 'l') {
+      width: 26%;
+    }
     @include rwd('large', 'l') {
       width: 18%;
     }
   }
+  
   .mercury {
     @include orbit-animation('mercury', 32vw, 5s);
     z-index: 2;
@@ -61,6 +65,13 @@
     @include orbit-animation('mars', 58vw, 10s);
     z-index: 5;
     width: 7%;
+    @include rwd('small-l', 'l') {
+      display: none;
+    }
+    @include rwd('medium-l', 'l') {
+      display: block;
+      width: 5%;
+    }
     @include rwd('large', 'l') {
       width: 2%;
     }
@@ -69,6 +80,13 @@
     @include orbit-animation('jupiter', 70vw, 15s);
     z-index: 6;
     width: 11%;
+    @include rwd('small-l', 'l') {
+      display: none;
+    }
+    @include rwd('medium-l', 'l') {
+      display: block;
+      width: 8%;
+    }
     @include rwd('large', 'l') {
       width: 4.5%;
     }
@@ -77,6 +95,13 @@
     @include orbit-animation('saturn', 86vw, 17s);
     z-index: 7;
     width: 9%;
+    @include rwd('small-l', 'l') {
+      display: none;
+    }
+    @include rwd('medium-l', 'l') {
+      display: block;
+      width: 5%;
+    }
     @include rwd('large', 'l') {
       width: 4%;
     }
@@ -87,6 +112,13 @@
     width: 13%;
     @include rwd('small-p', 'p') {
       display: none;
+    }
+    @include rwd('small-l', 'l') {
+      display: none;
+    }
+    @include rwd('medium-l', 'l') {
+      display: block;
+      width: 8%;
     }
     @include rwd('large', 'l') {
       width: 6%;
@@ -99,14 +131,20 @@
     @include rwd('small-p', 'p') {
       display: none;
     }
+    @include rwd('small-l', 'l') {
+      display: none;
+    }
     @include rwd('large', 'l') {
+      display: block;
       width: 8%;
     }
   }
 }
 
-.mercury:hover, .venus:hover, .earth:hover, .mars:hover,
-.jupiter:hover, .saturn:hover, .uranus:hover, .neptune:hover {
-  animation-play-state: paused;
+.mercury, .venus, .earth, .mars,
+.jupiter, .saturn, .uranus, .neptune {
+  &:hover {
+    animation-play-state: paused;
+  }
 }
 
