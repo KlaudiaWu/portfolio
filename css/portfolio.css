@@ -1,0 +1,10 @@
+.portfolio-section div {
+  width: 50vw;
+  height: 100vh;
+}
+
+.project-start {
+  background-image: url("/img/moon-background.svg") center right;
+  background-size: 125%;
+}
+/*# sourceMappingURL=portfolio.css.map */

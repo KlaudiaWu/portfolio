@@ -1679,6 +1679,53 @@ form {
           animation-play-state: paused;
 }
 
+.project-container {
+  position: relative;
+}
+
+.project-container div {
+  width: 50vw;
+  height: 100vh;
+}
+
+.project-start {
+  background: url("/img/moon-background.svg") 85% center/120% no-repeat;
+  position: relative;
+  z-index: 5;
+}
+
+.project1 {
+  background: url("/img/mercury-background.svg") 85% center/120% no-repeat;
+  position: absolute;
+  top: 0;
+  z-index: 4;
+  left: 12.5%;
+}
+
+.project2 {
+  background: url("/img/venus-background.svg") center center/190% no-repeat;
+  position: absolute;
+  top: 0;
+  z-index: 3;
+  left: 25%;
+}
+
+.project3 {
+  background: url("/img/earth-background.svg") center center/190% no-repeat;
+  position: absolute;
+  top: 0;
+  z-index: 2;
+  left: 37.5%;
+}
+
+.project4 {
+  background: url("/img/mars-background.svg") 35% center/210% no-repeat;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  left: 50%;
+}
+
 section.about-me-section {
   display: -webkit-box;
   display: -ms-flexbox;
