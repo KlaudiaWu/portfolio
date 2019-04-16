@@ -1679,6 +1679,15 @@ form {
           animation-play-state: paused;
 }
 
+.portfolio-section {
+  position: absolute;
+}
+
+.after-slider {
+  position: absolute;
+  left: 100vw;
+}
+
 .project-container {
   position: relative;
 }
