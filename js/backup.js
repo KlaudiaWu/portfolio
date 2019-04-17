@@ -68,7 +68,7 @@
         };
     }
 
-    function requestOffsetValue(index) {
+    function getOffsetValue(index) {
         return offsetValues[index];
     }
 
@@ -86,7 +86,7 @@
         stap:
         if (offTop <= 0) {
             for (i = 0; i < elem.length; i++) {
-                var currentScrollY = requestOffsetValue(i);
+                var currentScrollY = getOffsetValue(i);
 
                 if (i === elem.length - 1) {
                     break;
