@@ -1,163 +1,160 @@
 (function () {
-
-    //odległość od góry do dołu dokumentu potrzena do zakończenia skryptu
-    console.log("DUUUUUUUUPA" + window.scrollY + window.innerHeight);
-
-    var sliderWrapper = document.getElementsByClassName("slider-wrapper");
-    var elem = Array.from(document.getElementsByClassName("project"));
-    var furtherElem = Array.from(document.getElementsByClassName("after-slider"));
-    var scrollDifference = parseInt((getComputedStyle(furtherElem[0]).height)) - parseInt(window.innerHeight);
-
-    elem = elem.concat(furtherElem);
-
-    var scrollWidth = 0;
-    for (i = 0; i < elem.length; i++) {
-        elem[i].style.height = getComputedStyle(elem[i]).height;
-        elem[i].style.width = getComputedStyle(elem[i]).width;
-        scrollWidth += parseInt(getComputedStyle(elem[i]).height);
+    function Container(name) {
+        var grabbed = document.getElementsByClassName(name);
+        this.object = grabbed[0];
     }
-    scrollWidth = scrollWidth + "px";
 
-    console.log("Ta wartość powinna być taka jak kolejna: " + scrollWidth);
-    console.log("3.5 ekranu to: " + 3.5 * window.innerWidth);
-
-    var scrollPath = document.getElementsByClassName("scroll-container");
-    scrollPath[0].style.height = scrollWidth;
-
-
-    var width = window.width;
-    var offsetLeft = parseInt(getComputedStyle(elem[1]).left);
-    var elemWidth = parseInt(getComputedStyle(elem[0]).width);
-    var toMove = (elemWidth - offsetLeft);
-    // var controlValues = new Array(elem.length).fill({
-    //     width: 0,
-    //     left: 0,
-    //     right: 0
-    // });
-    // for (i = 0; i < elem.length; i++) {
-    //     var style = getComputedStyle(elem[i]);
-    //     controlValues[i].left = style.left;
-    //     controlValues[i].width = style.width
-    // }
-
-    var offsetValues = new Array(elem.length).fill(0);
-    console.log(offsetValues);
-
-
-
-    // scroll bound animation !!!
-
-
-    var offTop;
-    ticking = false;
-
-    var start = 0;
-    var index = 0;
-    var change = 0;
-    var globalMove = 0;
-    var prevScroll = 0;
-
-    var wrapper = {
-        obj: sliderWrapper[0],
+    Container.prototype = {
+        bound: function () {
+            return this.object.getBoundingClientRect();
+        },
         fixed: function () {
-            this.obj.setAttribute('style', 'position: fixed; top: 0; left: 0;');
+            this.object.setAttribute('style', 'position: fixed; top: 0; left: 0;');
         },
         relative: function () {
-            this.obj.setAttribute('style', 'position: relative;');
-        },
-        absolute: function () {
-            this.obj.setAttribute('style', 'position: absolute; bottom: 0;');
-        },
-        style: function () {
-            if (this.computedStyle === undefined) {
-                this.computedStyle = getComputedStyle(this.obj);
-            }
-            return this.computedStyle;
-        },
-        computedStyle: undefined
+            this.object.setAttribute('style', 'position: relative;');
+        }
     };
 
-
-    function count(index) {
-        index = index;
-        window.onscroll = function (e) {
-            offTop = scrollPath[0].getBoundingClientRect().top; //Pierwszy element triggeruje rozpoczęcie scrolla horyzontalnego
-            //Muszę znaleźć odległość, która zostanie do zeskrolowania po wyłączeniu fixed na elemencie futherElem
-            offBottom = scrollPath[0].getBoundingClientRect().bottom;
-            if (offTop <= 0) {
-                wrapper.fixed();
-
-                for (i = 0; i < index + 1; i++) {
-                    setOffsetValue(i, globalMove);
-                }
-            } else if (offTop > 0) {
-                wrapper.relative();
-            } else if (offTop <= 0 && scrollDifference === (window.scrollY) + (window.innerHeight)) {
-                wrapper.absolute();
-
-            }
-
-            // console.log(offTop);
-            // console.log(window.scrollY);
-
-
-            globalMove = window.scrollY - prevScroll;
-            prevScroll = window.scrollY;
-
-            requestTick();
+    function ScrollElement(index, htmlElement) {
+        this.index = index;
+        this.htmlElement = htmlElement;
+        this.frozen = false;
+        this.prev = false;
+        this.next = false;
+        this.translateX = 0;
+        this.cover = 0;
+        this.bounds = {
+            left: this.bound().left,
+            right: this.bound().right,
         };
     }
 
-    count(0);
-
-    function setOffsetValue(index, value) {
-        offsetValues[index] += value;
-    }
-
-    function getOffsetValue(index) {
-        return offsetValues[index];
-    }
-
-    function requestTick() {
-        if (!ticking) {
-            ticking = true;
-            requestAnimationFrame(horizontalScroll);
-        }
-    }
-
-    function horizontalScroll() {
-
-        if (offTop <= 0) {
-            for (i = 0; i < elem.length; i++) {
-                var currentScrollY = getOffsetValue(i);
-
-                // console.log(offsetValues);
-                // console.log(currentScrollY + " - " + parseInt(window.innerWidth));
-                if (i === elem.length - 2 && currentScrollY >= parseInt(window.innerWidth)) {
-                    wrapper.absolute();
-                    break;
+    ScrollElement.prototype = {
+        bound: function () {
+            return this.htmlElement.getBoundingClientRect();
+        },
+        setPrev: function (prev) {
+            this.prev = prev;
+        },
+        getPrev: function () {
+            return this.prev;
+        },
+        setNext: function (next) {
+            this.next = next;
+        },
+        getNext: function () {
+            return this.next;
+        },
+        move: function (distance) {
+            this.translateX = distance;
+            this.translateY = 0;
+            if (this.getNext()) {
+                this.getNext().move(this.translateX - this.cover);
+            }
+            else {
+                if (this.translateX >= this.bounds.left) {
+                    this.translateX = this.bounds.left;
+                    this.translateY = distance - this.bounds.left;
                 }
-
-                console.log(i + '-' + currentScrollY);
-                elem[i].style.transform = "translateX(" + -currentScrollY + "px)";
-                //Warunek, jeżeli element jest przedostatni
-                if (i === offsetValues.length - 2 && currentScrollY > 0) {
-                    elem[i + 1].style.transform = "translateX(" + -currentScrollY + "px)";
-                    count(i + 1);
-                    break;
-
-                } else if (currentScrollY >= (toMove - globalMove)) {
-                    count(i + 1);
-                }
-
-
+            }
+            if (distance > 0) {
+                this.htmlElement.style.transform = "translate(" + -this.translateX + "px," + -this.translateY + "px)";
+            }
+            else {
+                this.htmlElement.style.transform = "translate(0px, 0px)";
             }
         }
+    };
 
-        ticking = false;
+    function Application(wrapper, path, element_class_list) {
+        this.raw = {
+            wrapper: new Container(wrapper),
+            path: new Container(path),
+            elements: new Array
+        };
+        this.wrapper = this.raw.wrapper;
+        this.path = this.raw.path;
+        this.elements = new Array;
 
-        // https://www.html5rocks.com/en/tutorials/speed/animations/
+        for (var name in element_class_list) {
+            this.appendElements(element_class_list[name]);
+        }
 
+        this.setup();
+        this.init();
     }
 
+    Application.prototype = {
+        appendElements: function (name) {
+            var grabbed = Array.from(document.getElementsByClassName(name));
+            this.raw.elements = this.raw.elements.concat(grabbed);
+        },
+        setup: function () {
+            var l = this.raw.elements.length;
+            var width = 0;
+            var width_dimension = '';
+            var prev = false;
+            for (i = 0; i < l; i++) {
+                item = new ScrollElement(i, this.raw.elements[i]);
+                item.setPrev(prev);
+                if (item.getPrev()) {
+                    item.getPrev().setNext(item);
+                }
+                this.elements.push(item);
+                prev = item;
+                (i === l - 1) ? width_dimension = 'height' : width_dimension = 'width'; // short hand if - () ? if true : if false;
+
+                width += parseInt(getComputedStyle(this.raw.elements[i])[width_dimension]);
+            }
+            this.path.object.style.height = width + 'px';
+        },
+        init: function () {
+            for (var el in this.elements) {
+                var element = this.elements[el];
+                if (element.getNext()) {
+                    element.cover = element.bound().right - element.getNext().bound().left;
+                }
+            }
+            this.firstElement = this.elements[0];
+        },
+        run: function () {
+            var distance = -this.path.bound().top; //pokonany dystans scroll-container (mega scroll)
+
+            if (this.started === undefined) {
+                this.started = true;
+            }
+
+            if (distance >= 0) {
+                this.wrapper.fixed();
+                this.firstElement.move(distance);
+            } else if (distance < 0) {
+                this.wrapper.relative();
+                this.firstElement.move(0);
+            }
+        }
+    }
+
+
+
+    document.onreadystatechange = () => {
+        if (document.readyState === 'complete') {
+            var App = new Application(
+                "slider-wrapper",
+                "scroll-container",
+                { 0: "project", 1: "after-slider" }
+            );
+
+            window.onscroll = function () {
+                App.run();
+            };
+
+            window.onresize = function () {
+                clearTimeout(timer);
+                var timer = setTimeout(function () {
+                    window.location.reload();
+                }, 500);
+            }
+        }
+    };
 })();
