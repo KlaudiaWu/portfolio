@@ -91,7 +91,7 @@
 // Mixin for easy background image. Position are two number
 // values, and 'if' check if value are string or number.
 @mixin background-img ($img, $type, $position-x, $position-y, $size-x, $size-y) {
-    background-image: url('/img/#{$img}.#{$type}');
+    background-image: url('https://klaudiawojciak.pl/img/#{$img}.#{$type}');
     background-position: #{$position-x}vw #{$position-y}vh;
   
     @if type-of($size-x) == string {

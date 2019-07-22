@@ -895,7 +895,7 @@ form {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  background: url("/img/stars-background.svg") repeat;
+  background: url("https://klaudiawojciak.pl/img/stars-background.svg") repeat;
   background-size: 100%;
 }
 
@@ -1698,13 +1698,13 @@ form {
 }
 
 .project-start {
-  background: url("/img/moon-background.svg") 85% center/120% no-repeat;
+  background: url("https://klaudiawojciak.pl/img/moon-background.svg") 85% center/120% no-repeat;
   position: relative;
   z-index: 5;
 }
 
 .project1 {
-  background: url("/img/mercury-background.svg") 85% center/120% no-repeat;
+  background: url("https://klaudiawojciak.pl/img/mercury-background.svg") 85% center/120% no-repeat;
   position: absolute;
   top: 0;
   z-index: 4;
@@ -1712,7 +1712,7 @@ form {
 }
 
 .project2 {
-  background: url("/img/venus-background.svg") center center/190% no-repeat;
+  background: url("https://klaudiawojciak.pl/img/venus-background.svg") center center/190% no-repeat;
   position: absolute;
   top: 0;
   z-index: 3;
@@ -1720,7 +1720,7 @@ form {
 }
 
 .project3 {
-  background: url("/img/earth-background.svg") center center/190% no-repeat;
+  background: url("https://klaudiawojciak.pl/img/earth-background.svg") center center/190% no-repeat;
   position: absolute;
   top: 0;
   z-index: 2;
@@ -1728,7 +1728,7 @@ form {
 }
 
 .project4 {
-  background: url("/img/mars-background.svg") 35% center/210% no-repeat;
+  background: url("https://klaudiawojciak.pl/img/mars-background.svg") 35% center/210% no-repeat;
   position: absolute;
   top: 0;
   z-index: 1;
