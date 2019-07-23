@@ -1024,7 +1024,7 @@ form {
 
 @media (min-width: 1366px) and (orientation: landscape) {
   .solar-system .mercury {
-    width: 1%;
+    width: 2%;
   }
 }
 
@@ -1106,7 +1106,7 @@ form {
 
 @media (min-width: 1366px) and (orientation: landscape) {
   .solar-system .venus {
-    width: 1%;
+    width: 2%;
   }
 }
 
@@ -1120,22 +1120,22 @@ form {
 @media (min-width: 250px) and (orientation: portrait) {
   @-webkit-keyframes earth {
     from {
-      -webkit-transform: rotate(0deg) translate(-49vw) rotate(0deg);
-              transform: rotate(0deg) translate(-49vw) rotate(0deg);
+      -webkit-transform: rotate(0deg) translate(-48vw) rotate(0deg);
+              transform: rotate(0deg) translate(-48vw) rotate(0deg);
     }
     to {
-      -webkit-transform: rotate(360deg) translate(-49vw) rotate(-360deg);
-              transform: rotate(360deg) translate(-49vw) rotate(-360deg);
+      -webkit-transform: rotate(360deg) translate(-48vw) rotate(-360deg);
+              transform: rotate(360deg) translate(-48vw) rotate(-360deg);
     }
   }
   @keyframes earth {
     from {
-      -webkit-transform: rotate(0deg) translate(-49vw) rotate(0deg);
-              transform: rotate(0deg) translate(-49vw) rotate(0deg);
+      -webkit-transform: rotate(0deg) translate(-48vw) rotate(0deg);
+              transform: rotate(0deg) translate(-48vw) rotate(0deg);
     }
     to {
-      -webkit-transform: rotate(360deg) translate(-49vw) rotate(-360deg);
-              transform: rotate(360deg) translate(-49vw) rotate(-360deg);
+      -webkit-transform: rotate(360deg) translate(-48vw) rotate(-360deg);
+              transform: rotate(360deg) translate(-48vw) rotate(-360deg);
     }
   }
 }
@@ -1143,22 +1143,22 @@ form {
 @media (min-width: 500px) and (orientation: landscape) {
   @-webkit-keyframes earth {
     from {
-      -webkit-transform: rotate(0deg) translate(-44.54545vw) rotate(0deg);
-              transform: rotate(0deg) translate(-44.54545vw) rotate(0deg);
+      -webkit-transform: rotate(0deg) translate(-43.63636vw) rotate(0deg);
+              transform: rotate(0deg) translate(-43.63636vw) rotate(0deg);
     }
     to {
-      -webkit-transform: rotate(360deg) translate(-44.54545vw) rotate(-360deg);
-              transform: rotate(360deg) translate(-44.54545vw) rotate(-360deg);
+      -webkit-transform: rotate(360deg) translate(-43.63636vw) rotate(-360deg);
+              transform: rotate(360deg) translate(-43.63636vw) rotate(-360deg);
     }
   }
   @keyframes earth {
     from {
-      -webkit-transform: rotate(0deg) translate(-44.54545vw) rotate(0deg);
-              transform: rotate(0deg) translate(-44.54545vw) rotate(0deg);
+      -webkit-transform: rotate(0deg) translate(-43.63636vw) rotate(0deg);
+              transform: rotate(0deg) translate(-43.63636vw) rotate(0deg);
     }
     to {
-      -webkit-transform: rotate(360deg) translate(-44.54545vw) rotate(-360deg);
-              transform: rotate(360deg) translate(-44.54545vw) rotate(-360deg);
+      -webkit-transform: rotate(360deg) translate(-43.63636vw) rotate(-360deg);
+              transform: rotate(360deg) translate(-43.63636vw) rotate(-360deg);
     }
   }
 }
@@ -1166,29 +1166,29 @@ form {
 @media (min-width: 1366px) and (orientation: landscape) {
   @-webkit-keyframes earth {
     from {
-      -webkit-transform: rotate(0deg) translate(-18.84615vw) rotate(0deg);
-              transform: rotate(0deg) translate(-18.84615vw) rotate(0deg);
+      -webkit-transform: rotate(0deg) translate(-18.46154vw) rotate(0deg);
+              transform: rotate(0deg) translate(-18.46154vw) rotate(0deg);
     }
     to {
-      -webkit-transform: rotate(360deg) translate(-18.84615vw) rotate(-360deg);
-              transform: rotate(360deg) translate(-18.84615vw) rotate(-360deg);
+      -webkit-transform: rotate(360deg) translate(-18.46154vw) rotate(-360deg);
+              transform: rotate(360deg) translate(-18.46154vw) rotate(-360deg);
     }
   }
   @keyframes earth {
     from {
-      -webkit-transform: rotate(0deg) translate(-18.84615vw) rotate(0deg);
-              transform: rotate(0deg) translate(-18.84615vw) rotate(0deg);
+      -webkit-transform: rotate(0deg) translate(-18.46154vw) rotate(0deg);
+              transform: rotate(0deg) translate(-18.46154vw) rotate(0deg);
     }
     to {
-      -webkit-transform: rotate(360deg) translate(-18.84615vw) rotate(-360deg);
-              transform: rotate(360deg) translate(-18.84615vw) rotate(-360deg);
+      -webkit-transform: rotate(360deg) translate(-18.46154vw) rotate(-360deg);
+              transform: rotate(360deg) translate(-18.46154vw) rotate(-360deg);
     }
   }
 }
 
 @media (min-width: 1366px) and (orientation: landscape) {
   .solar-system .earth {
-    width: 3%;
+    width: 4%;
   }
 }
 
@@ -1202,22 +1202,22 @@ form {
 @media (min-width: 250px) and (orientation: portrait) {
   @-webkit-keyframes mars {
     from {
-      -webkit-transform: rotate(0deg) translate(-58vw) rotate(0deg);
-              transform: rotate(0deg) translate(-58vw) rotate(0deg);
+      -webkit-transform: rotate(0deg) translate(-57vw) rotate(0deg);
+              transform: rotate(0deg) translate(-57vw) rotate(0deg);
     }
     to {
-      -webkit-transform: rotate(360deg) translate(-58vw) rotate(-360deg);
-              transform: rotate(360deg) translate(-58vw) rotate(-360deg);
+      -webkit-transform: rotate(360deg) translate(-57vw) rotate(-360deg);
+              transform: rotate(360deg) translate(-57vw) rotate(-360deg);
     }
   }
   @keyframes mars {
     from {
-      -webkit-transform: rotate(0deg) translate(-58vw) rotate(0deg);
-              transform: rotate(0deg) translate(-58vw) rotate(0deg);
+      -webkit-transform: rotate(0deg) translate(-57vw) rotate(0deg);
+              transform: rotate(0deg) translate(-57vw) rotate(0deg);
     }
     to {
-      -webkit-transform: rotate(360deg) translate(-58vw) rotate(-360deg);
-              transform: rotate(360deg) translate(-58vw) rotate(-360deg);
+      -webkit-transform: rotate(360deg) translate(-57vw) rotate(-360deg);
+              transform: rotate(360deg) translate(-57vw) rotate(-360deg);
     }
   }
 }
@@ -1225,22 +1225,22 @@ form {
 @media (min-width: 500px) and (orientation: landscape) {
   @-webkit-keyframes mars {
     from {
-      -webkit-transform: rotate(0deg) translate(-52.72727vw) rotate(0deg);
-              transform: rotate(0deg) translate(-52.72727vw) rotate(0deg);
+      -webkit-transform: rotate(0deg) translate(-51.81818vw) rotate(0deg);
+              transform: rotate(0deg) translate(-51.81818vw) rotate(0deg);
     }
     to {
-      -webkit-transform: rotate(360deg) translate(-52.72727vw) rotate(-360deg);
-              transform: rotate(360deg) translate(-52.72727vw) rotate(-360deg);
+      -webkit-transform: rotate(360deg) translate(-51.81818vw) rotate(-360deg);
+              transform: rotate(360deg) translate(-51.81818vw) rotate(-360deg);
     }
   }
   @keyframes mars {
     from {
-      -webkit-transform: rotate(0deg) translate(-52.72727vw) rotate(0deg);
-              transform: rotate(0deg) translate(-52.72727vw) rotate(0deg);
+      -webkit-transform: rotate(0deg) translate(-51.81818vw) rotate(0deg);
+              transform: rotate(0deg) translate(-51.81818vw) rotate(0deg);
     }
     to {
-      -webkit-transform: rotate(360deg) translate(-52.72727vw) rotate(-360deg);
-              transform: rotate(360deg) translate(-52.72727vw) rotate(-360deg);
+      -webkit-transform: rotate(360deg) translate(-51.81818vw) rotate(-360deg);
+              transform: rotate(360deg) translate(-51.81818vw) rotate(-360deg);
     }
   }
 }
@@ -1248,22 +1248,22 @@ form {
 @media (min-width: 1366px) and (orientation: landscape) {
   @-webkit-keyframes mars {
     from {
-      -webkit-transform: rotate(0deg) translate(-22.30769vw) rotate(0deg);
-              transform: rotate(0deg) translate(-22.30769vw) rotate(0deg);
+      -webkit-transform: rotate(0deg) translate(-21.92308vw) rotate(0deg);
+              transform: rotate(0deg) translate(-21.92308vw) rotate(0deg);
     }
     to {
-      -webkit-transform: rotate(360deg) translate(-22.30769vw) rotate(-360deg);
-              transform: rotate(360deg) translate(-22.30769vw) rotate(-360deg);
+      -webkit-transform: rotate(360deg) translate(-21.92308vw) rotate(-360deg);
+              transform: rotate(360deg) translate(-21.92308vw) rotate(-360deg);
     }
   }
   @keyframes mars {
     from {
-      -webkit-transform: rotate(0deg) translate(-22.30769vw) rotate(0deg);
-              transform: rotate(0deg) translate(-22.30769vw) rotate(0deg);
+      -webkit-transform: rotate(0deg) translate(-21.92308vw) rotate(0deg);
+              transform: rotate(0deg) translate(-21.92308vw) rotate(0deg);
     }
     to {
-      -webkit-transform: rotate(360deg) translate(-22.30769vw) rotate(-360deg);
-              transform: rotate(360deg) translate(-22.30769vw) rotate(-360deg);
+      -webkit-transform: rotate(360deg) translate(-21.92308vw) rotate(-360deg);
+              transform: rotate(360deg) translate(-21.92308vw) rotate(-360deg);
     }
   }
 }
@@ -1283,7 +1283,7 @@ form {
 
 @media (min-width: 1366px) and (orientation: landscape) {
   .solar-system .mars {
-    width: 2%;
+    width: 3%;
   }
 }
 
@@ -1378,7 +1378,7 @@ form {
 
 @media (min-width: 1366px) and (orientation: landscape) {
   .solar-system .jupiter {
-    width: 4.5%;
+    width: 5.5%;
   }
 }
 
@@ -1473,7 +1473,7 @@ form {
 
 @media (min-width: 1366px) and (orientation: landscape) {
   .solar-system .saturn {
-    width: 4%;
+    width: 5%;
   }
 }
 
@@ -1574,7 +1574,7 @@ form {
 
 @media (min-width: 1366px) and (orientation: landscape) {
   .solar-system .uranus {
-    width: 6%;
+    width: 7%;
   }
 }
 
@@ -1669,7 +1669,7 @@ form {
 @media (min-width: 1366px) and (orientation: landscape) {
   .solar-system .neptune {
     display: block;
-    width: 8%;
+    width: 9%;
   }
 }
 
@@ -1677,6 +1677,15 @@ form {
 .jupiter:hover, .saturn:hover, .uranus:hover, .neptune:hover {
   -webkit-animation-play-state: paused;
           animation-play-state: paused;
+}
+
+.mercury img, .venus img, .earth img, .mars img,
+.jupiter img, .saturn img, .uranus img, .neptune img {
+  width: 100%;
+}
+
+.neptune img {
+  width: 100%;
 }
 
 .portfolio-section {
@@ -1695,16 +1704,18 @@ form {
 .project-container div {
   width: 50vw;
   height: 100vh;
+  -webkit-box-shadow: 0px 0px 32px -5px rgba(0, 0, 0, 0.7);
+          box-shadow: 0px 0px 32px -5px rgba(0, 0, 0, 0.7);
 }
 
 .project-start {
-  background: url("https://klaudiawojciak.pl/img/moon-background.svg") 85% center/120% no-repeat;
+  background: url("https://klaudiawojciak.pl/img/neptune-background.jpg") center no-repeat;
   position: relative;
   z-index: 5;
 }
 
 .project1 {
-  background: url("https://klaudiawojciak.pl/img/mercury-background.svg") 85% center/120% no-repeat;
+  background: url("https://klaudiawojciak.pl/img/mercury-background.jpg") center no-repeat;
   position: absolute;
   top: 0;
   z-index: 4;
@@ -1712,7 +1723,7 @@ form {
 }
 
 .project2 {
-  background: url("https://klaudiawojciak.pl/img/venus-background.svg") center center/190% no-repeat;
+  background: url("https://klaudiawojciak.pl/img/jupiter-background.jpg") center center no-repeat;
   position: absolute;
   top: 0;
   z-index: 3;
@@ -1720,7 +1731,7 @@ form {
 }
 
 .project3 {
-  background: url("https://klaudiawojciak.pl/img/earth-background.svg") center center/190% no-repeat;
+  background: url("https://klaudiawojciak.pl/img/earth-background.jpg") center center no-repeat;
   position: absolute;
   top: 0;
   z-index: 2;
@@ -1728,7 +1739,7 @@ form {
 }
 
 .project4 {
-  background: url("https://klaudiawojciak.pl/img/mars-background.svg") 35% center/210% no-repeat;
+  background: url("https://klaudiawojciak.pl/img/mars-background.jpg") 35% center no-repeat;
   position: absolute;
   top: 0;
   z-index: 1;

@@ -42,7 +42,7 @@
     z-index: 2;
     width: 6%;
     @include rwd('large', 'l') {
-      width: 1%;
+      width: 2%;
     }
   }
   .venus {
@@ -50,19 +50,19 @@
     z-index: 3;
     width: 6%;
     @include rwd('large', 'l') {
-      width: 1%;
+      width: 2%;
     }
   }
   .earth {
-    @include orbit-animation('earth', 49vw, 9s);
+    @include orbit-animation('earth', 48vw, 9s);
     z-index: 4;
     width: 8%;
     @include rwd('large', 'l') {
-      width: 3%;
+      width: 4%;
     }
   }
   .mars {
-    @include orbit-animation('mars', 58vw, 10s);
+    @include orbit-animation('mars', 57vw, 10s);
     z-index: 5;
     width: 7%;
     @include rwd('small-l', 'l') {
@@ -73,7 +73,7 @@
       width: 5%;
     }
     @include rwd('large', 'l') {
-      width: 2%;
+      width: 3%;
     }
   }
   .jupiter {
@@ -88,7 +88,7 @@
       width: 8%;
     }
     @include rwd('large', 'l') {
-      width: 4.5%;
+      width: 5.5%;
     }
   }
   .saturn {
@@ -103,7 +103,7 @@
       width: 5%;
     }
     @include rwd('large', 'l') {
-      width: 4%;
+      width: 5%;
     }
   }
   .uranus {
@@ -121,7 +121,7 @@
       width: 8%;
     }
     @include rwd('large', 'l') {
-      width: 6%;
+      width: 7%;
     }
   }
   .neptune {
@@ -136,7 +136,7 @@
     }
     @include rwd('large', 'l') {
       display: block;
-      width: 8%;
+      width: 9%;
     }
   }
 }
@@ -146,5 +146,12 @@
   &:hover {
     animation-play-state: paused;
   }
+  img {
+    width: 100%;
+  }
+}
+
+.neptune img {
+  width: 100%;
 }
 
