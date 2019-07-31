@@ -56,3 +56,21 @@ textarea {
     height: 20vh;
   }
 }
+
+#error-message {
+  padding: 20px;
+  margin-bottom: 2vh;
+  width: 100%;
+  text-align: center;
+  background-color: red; 
+  display: none;
+}
+
+#success-message {
+  padding: 20px;
+  margin-bottom: 2vh;
+  width: 100%;
+  text-align: center;
+  background-color: green; 
+  display: none;
+}

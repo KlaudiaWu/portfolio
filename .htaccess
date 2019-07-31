@@ -1,0 +1,4 @@
+Header set Access-Control-Allow-Origin 'https://klaudiawojciak.pl http://klaudiawojciak.pl'
+RewriteEngine On
+RewriteCond %{SERVER_PORT} 80
+RewriteRule ^(.*)$ https://klaudiawojciak.pl/$1 [R,L]

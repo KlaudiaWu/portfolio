@@ -5,6 +5,10 @@
   align-items: center;
 }
 
+#captcha {
+  display: none;
+}
+
 .submit {
   display: flex;
   flex-direction: column;

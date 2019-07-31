@@ -1,6 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="https://www.w3.org/1999/xhtml">
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
@@ -12,7 +13,6 @@
     <link href="https://fonts.googleapis.com/css?family=Arima+Madurai:400,900|Roboto:100,400,900&amp;subset=latin-ext" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://klaudiawojciak.pl/css/main.css">
 
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 
 <body>
@@ -60,7 +60,10 @@
                             <p class="about-me-text">Nazywam się Klaudia i jestem Front-End Developerem z Warszawy.
                             Tworzę strony internetowe i szczególnie lubię wykorzystywać pzy tym
                             ciekawe animacje i przejścia. W swoich projektach staram się dbać o
-                            przejrzystość i szybkość działania aplikacji.
+                            przejrzystość i szybkość działania aplikacji.</br>
+                            Tworząc strony przykładam szczególną uwagę do tego,
+                            aby były w pełni responsywne. Jestem zwolenniczką 
+                            podejścia Mobile First.
                             </p>
                         </div>
                         <div class="skills-chart">
@@ -80,6 +83,15 @@
                                 <div class="skill-tank">
                                     <div class="skill-percent css3"></div>
                                     <p>80%</p>
+                                </div>
+                            </div>
+                            <div class="skill-container">
+                                <div class="skill-label">
+                                    <h4>React</h4>
+                                </div>
+                                <div class="skill-tank">
+                                    <div class="skill-percent react"></div>
+                                    <p>30%</p>
                                 </div>
                             </div>
                             <div class="skill-container">
@@ -129,34 +141,22 @@
                             </div>
                         </div>
                     </div>
-                    <div class="rwd-container">
+                    <!-- <div class="rwd-container">
                         <h2>RWD</h2>
                         <p>Tworząc strony przykładam szczególną uwagę do tego,
                         aby były w pełni responsywne. Jestem zwolenniczką 
                         podejścia Mobile First
                         </p>
-                        <div class="rwd-monitor">
-                            <img alt="monitor" src="https://klaudiawojciak.pl/img/monitor.svg">
-                            <div></div>
-                        </div>
-                        <div class="rwd-tablet">
-                            <img alt="tablet" src="https://klaudiawojciak.pl/img/tablet.svg">
-                            <div></div>
-                        </div>
-                        <div class="rwd-smartphone">
-                            <img alt="smartphone" src="https://klaudiawojciak.pl/img/smartphone.svg">
-                            <div></div>
-                        </div>
-                    </div>
+                    </div> -->
                     <div class="about-me-hobby">
                         <h2>A poza pracą...?</h2>
                         <div class="hobby-container">
                             <div class="hobby">
                             <img alt="scrapbooking icon" src="https://klaudiawojciak.pl/img/scrapbooking-icon.svg">
                             <h3>Scrapbooking</h3>
-                            <p>W wolnym czasie tworzę ręcznie albumy na zdjęcia
+                            <p class="scrap-media">W wolnym czasie tworzę ręcznie albumy na zdjęcia
                             oraz kartki okolilcznościowe. Kilka z moich prac możesz
-                            obejrzeć <a>tutaj></a>
+                            obejrzeć na <a>moim kanale YouTube</a> oraz <a>Instagramie</a>.
                             </p>
                             </div>
                             <div class="hobby">
@@ -178,15 +178,22 @@
                 </section>
                 <section class="contact-section">
                     <h1>Napisz do mnie!</h1>
-                    <form id="contact-form">
-                        <input class="check" type="text" value="Imię">
-                        <input class="check" type="text" value="Adres email">
-                        <textarea class="check">Treść wiadomości</textarea>
+                    <form id="contact-form" method="POST" action="https://klaudiawojciak.pl/mail">
+                        <input class="check" name="user-name" type="text" value="Imię">
+                        <input class="check email" type="text" name="user-email" value="Adres email">
+                        <textarea class="check" name="user-message">Treść wiadomości</textarea>
                         <div class="submit">
-                            <div class="g-recaptcha" data-sitekey="your_site_key"></div>
+                            <input type="hidden" id="captcha" name="captcha" value="">
+                            <div class="g-recaptcha" data-callback="captchaCallback" data-sitekey="6LdQua8UAAAAAF0YJzYpULt2vL0lgs98Stpa4epB"></div>
                             <input type="submit" value="Wyślij">
                         </div>
                     </form>
+                    <div id="error-message">
+                        <p>Wypełnij poprawnie wszystkie pola!</p>
+                    </div>
+                    <div id="success-message">
+                        <p>Wiadomość została wysłana!</p>
+                    </div>
                 </section>
                 <section class="footer-section">
                     <div class="socialmedia-bar footer">
@@ -213,6 +220,12 @@
         </div>
     </div>
     
+    
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<script src="https://klaudiawojciak.pl/js/ajax.js"></script>
 <script src="https://klaudiawojciak.pl/js/portfolio-section.js"></script>
+<script src="https://klaudiawojciak.pl/js/re-captcha.js"></script>
+<script src="https://klaudiawojciak.pl/js/form-validation.js"></script>
+
 </body>
 </html>

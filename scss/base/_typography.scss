@@ -42,6 +42,12 @@ p, a, textarea {
   color: $white;
 }
 
+p.scrap-media a {
+  font-family: $roboto; 
+  color: $white;
+  @include vertical-rhythm(1em);
+}
+
 .skill-label h4 {
   font-weight: 900;
 }

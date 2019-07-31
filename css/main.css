@@ -154,6 +154,13 @@ p, a, textarea {
   color: #FFFFFF;
 }
 
+p.scrap-media a {
+  font-family: "Roboto", sans-serif;
+  color: #FFFFFF;
+  font-size: 1em;
+  line-height: 1.2;
+}
+
 .skill-label h4 {
   font-weight: 900;
 }
@@ -917,7 +924,6 @@ form {
 }
 
 .solar-system .sun {
-  z-index: 1;
   width: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -926,7 +932,6 @@ form {
 
 .solar-system .sun h2 {
   position: absolute;
-  z-index: 2;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
@@ -949,7 +954,6 @@ form {
 .solar-system .mercury {
   -webkit-animation: mercury 5s infinite linear;
           animation: mercury 5s infinite linear;
-  z-index: 2;
   width: 6%;
 }
 
@@ -1031,7 +1035,6 @@ form {
 .solar-system .venus {
   -webkit-animation: venus 7s infinite linear;
           animation: venus 7s infinite linear;
-  z-index: 3;
   width: 6%;
 }
 
@@ -1113,7 +1116,6 @@ form {
 .solar-system .earth {
   -webkit-animation: earth 9s infinite linear;
           animation: earth 9s infinite linear;
-  z-index: 4;
   width: 8%;
 }
 
@@ -1195,7 +1197,6 @@ form {
 .solar-system .mars {
   -webkit-animation: mars 10s infinite linear;
           animation: mars 10s infinite linear;
-  z-index: 5;
   width: 7%;
 }
 
@@ -1290,7 +1291,6 @@ form {
 .solar-system .jupiter {
   -webkit-animation: jupiter 15s infinite linear;
           animation: jupiter 15s infinite linear;
-  z-index: 6;
   width: 11%;
 }
 
@@ -1385,7 +1385,6 @@ form {
 .solar-system .saturn {
   -webkit-animation: saturn 17s infinite linear;
           animation: saturn 17s infinite linear;
-  z-index: 7;
   width: 9%;
 }
 
@@ -1480,7 +1479,6 @@ form {
 .solar-system .uranus {
   -webkit-animation: uranus 22s infinite linear;
           animation: uranus 22s infinite linear;
-  z-index: 8;
   width: 13%;
 }
 
@@ -1581,7 +1579,6 @@ form {
 .solar-system .neptune {
   -webkit-animation: neptune 28s infinite linear;
           animation: neptune 28s infinite linear;
-  z-index: 9;
   width: 15%;
 }
 
@@ -1991,6 +1988,10 @@ section.about-me-section {
   width: 80%;
 }
 
+.skill-percent.react {
+  width: 30%;
+}
+
 .skill-percent.js {
   width: 50%;
 }
@@ -2188,6 +2189,10 @@ section.about-me-section {
           align-items: center;
 }
 
+#captcha {
+  display: none;
+}
+
 .submit {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2345,6 +2350,24 @@ textarea {
   textarea {
     height: 20vh;
   }
+}
+
+#error-message {
+  padding: 20px;
+  margin-bottom: 2vh;
+  width: 100%;
+  text-align: center;
+  background-color: red;
+  display: none;
+}
+
+#success-message {
+  padding: 20px;
+  margin-bottom: 2vh;
+  width: 100%;
+  text-align: center;
+  background-color: green;
+  display: none;
 }
 
 .footer-section {
