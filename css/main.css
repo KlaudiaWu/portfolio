@@ -340,7 +340,7 @@ section h1 {
   }
 }
 
-@media (min-width: 1024px) and (orientation: landscape) {
+@media (min-width: 768px) and (orientation: landscape) {
   .socialmedia-bar a {
     margin: 0 1vw 0 1vw;
   }
@@ -430,20 +430,20 @@ section h1 {
   }
 }
 
-@media (min-width: 1024px) and (orientation: landscape) {
+@media (min-width: 768px) and (orientation: landscape) {
   .socialmedia-bar {
     width: calc(((100vw/12) * 3));
   }
 }
 
-@media (min-width: 1024px) and (orientation: landscape) and (min-width: 250px) and (orientation: portrait) {
+@media (min-width: 768px) and (orientation: landscape) and (min-width: 250px) and (orientation: portrait) {
   .socialmedia-bar {
     padding-left: 2.5%;
     padding-right: 2.5%;
   }
 }
 
-@media (min-width: 1024px) and (orientation: landscape) and (min-width: 1366px) and (orientation: landscape) {
+@media (min-width: 768px) and (orientation: landscape) and (min-width: 1366px) and (orientation: landscape) {
   .socialmedia-bar {
     margin-left: 3%;
     margin-right: 3%;
@@ -1275,7 +1275,7 @@ form {
   }
 }
 
-@media (min-width: 1024px) and (orientation: landscape) {
+@media (min-width: 768px) and (orientation: landscape) {
   .solar-system .mars {
     display: block;
     width: 5%;
@@ -1369,7 +1369,7 @@ form {
   }
 }
 
-@media (min-width: 1024px) and (orientation: landscape) {
+@media (min-width: 768px) and (orientation: landscape) {
   .solar-system .jupiter {
     display: block;
     width: 8%;
@@ -1463,7 +1463,7 @@ form {
   }
 }
 
-@media (min-width: 1024px) and (orientation: landscape) {
+@media (min-width: 768px) and (orientation: landscape) {
   .solar-system .saturn {
     display: block;
     width: 5%;
@@ -1563,7 +1563,7 @@ form {
   }
 }
 
-@media (min-width: 1024px) and (orientation: landscape) {
+@media (min-width: 768px) and (orientation: landscape) {
   .solar-system .uranus {
     display: block;
     width: 8%;
@@ -1689,9 +1689,35 @@ form {
   position: absolute;
 }
 
+@media (min-width: 250px) and (orientation: portrait) {
+  .portfolio-section {
+    position: relative;
+  }
+}
+
+@media (min-width: 500px) and (orientation: landscape) {
+  .portfolio-section {
+    position: relative;
+  }
+}
+
 .after-slider {
   position: absolute;
   left: 100vw;
+}
+
+@media (min-width: 250px) and (orientation: portrait) {
+  .after-slider {
+    left: 0;
+    position: relative;
+  }
+}
+
+@media (min-width: 500px) and (orientation: landscape) {
+  .after-slider {
+    left: 0;
+    position: relative;
+  }
 }
 
 .project-container {
@@ -1705,13 +1731,66 @@ form {
           box-shadow: 0px 0px 32px -5px rgba(0, 0, 0, 0.7);
 }
 
-.project-start {
+@media (min-width: 250px) and (orientation: portrait) {
+  .project-container div {
+    width: 100vw;
+  }
+}
+
+@media (min-width: 500px) and (orientation: landscape) {
+  .project-container div {
+    width: 100vw;
+  }
+}
+
+@media (min-width: 250px) and (orientation: portrait) {
+  .project1, .project2, .project3, .project4 {
+    position: relative;
+    left: 0;
+  }
+}
+
+@media (min-width: 500px) and (orientation: landscape) {
+  .project1, .project2, .project3, .project4 {
+    position: relative;
+    left: 0;
+  }
+}
+
+@media (min-width: 250px) and (orientation: portrait) {
+  .project {
+    background-size: 110% 110%;
+  }
+}
+
+@media (min-width: 500px) and (orientation: landscape) {
+  .project {
+    background-size: 100% auto;
+  }
+}
+
+.add-when-not-mobile .portfolio-section {
+  position: absolute;
+}
+
+.add-when-not-mobile .portfolio-section .project-container {
+  position: relative;
+}
+
+.add-when-not-mobile .portfolio-section .project-container div {
+  width: 50vw;
+  height: 100vh;
+  -webkit-box-shadow: 0px 0px 32px -5px rgba(0, 0, 0, 0.7);
+          box-shadow: 0px 0px 32px -5px rgba(0, 0, 0, 0.7);
+}
+
+.add-when-not-mobile .portfolio-section .project-container .project-start {
   background: url("https://klaudiawojciak.pl/img/neptune-background.jpg") center no-repeat;
   position: relative;
   z-index: 5;
 }
 
-.project1 {
+.add-when-not-mobile .portfolio-section .project-container .project1 {
   background: url("https://klaudiawojciak.pl/img/mercury-background.jpg") center no-repeat;
   position: absolute;
   top: 0;
@@ -1719,7 +1798,7 @@ form {
   left: 12.5%;
 }
 
-.project2 {
+.add-when-not-mobile .portfolio-section .project-container .project2 {
   background: url("https://klaudiawojciak.pl/img/jupiter-background.jpg") center center no-repeat;
   position: absolute;
   top: 0;
@@ -1727,7 +1806,7 @@ form {
   left: 25%;
 }
 
-.project3 {
+.add-when-not-mobile .portfolio-section .project-container .project3 {
   background: url("https://klaudiawojciak.pl/img/earth-background.jpg") center center no-repeat;
   position: absolute;
   top: 0;
@@ -1735,12 +1814,17 @@ form {
   left: 37.5%;
 }
 
-.project4 {
+.add-when-not-mobile .portfolio-section .project-container .project4 {
   background: url("https://klaudiawojciak.pl/img/mars-background.jpg") 35% center no-repeat;
   position: absolute;
   top: 0;
   z-index: 1;
   left: 50%;
+}
+
+.add-when-not-mobile .after-slider {
+  position: absolute;
+  left: 100vw;
 }
 
 section.about-me-section {
@@ -1803,7 +1887,7 @@ section.about-me-section {
   }
 }
 
-@media (min-width: 1024px) and (orientation: landscape) {
+@media (min-width: 768px) and (orientation: landscape) {
   .about-me-container .about-me {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1855,7 +1939,7 @@ section.about-me-section {
   }
 }
 
-@media (min-width: 1024px) and (orientation: landscape) {
+@media (min-width: 768px) and (orientation: landscape) {
   .klaudia-img {
     width: 30%;
   }
@@ -1925,7 +2009,7 @@ section.about-me-section {
   }
 }
 
-@media (min-width: 1024px) and (orientation: landscape) {
+@media (min-width: 768px) and (orientation: landscape) {
   .skill-container {
     height: 7vh;
   }
@@ -2225,7 +2309,7 @@ section.about-me-section {
   }
 }
 
-@media (min-width: 1024px) and (orientation: landscape) {
+@media (min-width: 768px) and (orientation: landscape) {
   .submit {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -2312,7 +2396,7 @@ input {
   }
 }
 
-@media (min-width: 1024px) and (orientation: landscape) {
+@media (min-width: 768px) and (orientation: landscape) {
   input {
     height: 8vh;
   }
@@ -2340,7 +2424,7 @@ textarea {
   }
 }
 
-@media (min-width: 1024px) and (orientation: landscape) {
+@media (min-width: 768px) and (orientation: landscape) {
   textarea {
     height: 25vh;
   }
@@ -2355,7 +2439,7 @@ textarea {
 #error-message {
   padding: 20px;
   margin-bottom: 2vh;
-  width: 100%;
+  width: 80%;
   text-align: center;
   background-color: red;
   display: none;
@@ -2364,7 +2448,7 @@ textarea {
 #success-message {
   padding: 20px;
   margin-bottom: 2vh;
-  width: 100%;
+  width: 80%;
   text-align: center;
   background-color: green;
   display: none;
