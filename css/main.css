@@ -122,6 +122,8 @@ h2 {
   font-family: "Arima Madurai", cursive;
   font-size: 2.25em;
   line-height: 2.25;
+  line-height: 1em;
+  margin-bottom: 5%;
 }
 
 .sun h2 {
@@ -1724,7 +1726,7 @@ form {
   position: relative;
 }
 
-.project-container div {
+.project-container div.project {
   width: 50vw;
   height: 100vh;
   -webkit-box-shadow: 0px 0px 32px -5px rgba(0, 0, 0, 0.7);
@@ -1732,41 +1734,94 @@ form {
 }
 
 @media (min-width: 250px) and (orientation: portrait) {
-  .project-container div {
+  .project-container div.project {
+    height: auto;
     width: 100vw;
-  }
-}
-
-@media (min-width: 500px) and (orientation: landscape) {
-  .project-container div {
-    width: 100vw;
-  }
-}
-
-@media (min-width: 250px) and (orientation: portrait) {
-  .project1, .project2, .project3, .project4 {
-    position: relative;
-    left: 0;
-  }
-}
-
-@media (min-width: 500px) and (orientation: landscape) {
-  .project1, .project2, .project3, .project4 {
-    position: relative;
-    left: 0;
-  }
-}
-
-@media (min-width: 250px) and (orientation: portrait) {
-  .project {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
     background-size: 110% 110%;
   }
 }
 
 @media (min-width: 500px) and (orientation: landscape) {
-  .project {
-    background-size: 100% auto;
+  .project-container div.project {
+    height: auto;
+    width: 100vw;
+    background-size: 110% auto;
   }
+}
+
+@media (min-width: 250px) and (orientation: portrait) {
+  .project-container div.project .project-arrow {
+    display: none;
+  }
+}
+
+@media (min-width: 500px) and (orientation: landscape) {
+  .project-container div.project .project-arrow {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) and (orientation: landscape) {
+  .project-container div.project .project-arrow {
+    display: block;
+  }
+}
+
+@media (min-width: 1366px) and (orientation: landscape) {
+  .project-container div.project .project-arrow {
+    display: block;
+  }
+}
+
+@media (min-width: 250px) and (orientation: portrait) {
+  .project-container div.project .project-margin img {
+    margin: 5vh 0;
+  }
+}
+
+@media (min-width: 250px) and (orientation: portrait) {
+  .project-container div.project .description-wrapper {
+    width: 100%;
+    padding: 4% 8% 15%;
+  }
+}
+
+@media (min-width: 250px) and (orientation: portrait) {
+  .project1, .project2, .project3, .project4 {
+    position: relative;
+    left: 0;
+  }
+}
+
+@media (min-width: 500px) and (orientation: landscape) {
+  .project1, .project2, .project3, .project4 {
+    position: relative;
+    left: 0;
+  }
+}
+
+.project-start {
+  background: url("https://klaudiawojciak.pl/img/neptune-background.jpg") center no-repeat;
+}
+
+.project1 {
+  background: url("https://klaudiawojciak.pl/img/mercury-background.jpg") center no-repeat;
+}
+
+.project2 {
+  background: url("https://klaudiawojciak.pl/img/jupiter-background.jpg") center center no-repeat;
+}
+
+.project3 {
+  background: url("https://klaudiawojciak.pl/img/earth-background.jpg") center center no-repeat;
+}
+
+.project4 {
+  background: url("https://klaudiawojciak.pl/img/mars-background.jpg") 35% center no-repeat;
 }
 
 .add-when-not-mobile .portfolio-section {
@@ -1777,7 +1832,7 @@ form {
   position: relative;
 }
 
-.add-when-not-mobile .portfolio-section .project-container div {
+.add-when-not-mobile .portfolio-section .project-container div.project {
   width: 50vw;
   height: 100vh;
   -webkit-box-shadow: 0px 0px 32px -5px rgba(0, 0, 0, 0.7);
@@ -1785,13 +1840,11 @@ form {
 }
 
 .add-when-not-mobile .portfolio-section .project-container .project-start {
-  background: url("https://klaudiawojciak.pl/img/neptune-background.jpg") center no-repeat;
   position: relative;
   z-index: 5;
 }
 
 .add-when-not-mobile .portfolio-section .project-container .project1 {
-  background: url("https://klaudiawojciak.pl/img/mercury-background.jpg") center no-repeat;
   position: absolute;
   top: 0;
   z-index: 4;
@@ -1799,7 +1852,6 @@ form {
 }
 
 .add-when-not-mobile .portfolio-section .project-container .project2 {
-  background: url("https://klaudiawojciak.pl/img/jupiter-background.jpg") center center no-repeat;
   position: absolute;
   top: 0;
   z-index: 3;
@@ -1807,7 +1859,6 @@ form {
 }
 
 .add-when-not-mobile .portfolio-section .project-container .project3 {
-  background: url("https://klaudiawojciak.pl/img/earth-background.jpg") center center no-repeat;
   position: absolute;
   top: 0;
   z-index: 2;
@@ -1815,7 +1866,6 @@ form {
 }
 
 .add-when-not-mobile .portfolio-section .project-container .project4 {
-  background: url("https://klaudiawojciak.pl/img/mars-background.jpg") 35% center no-repeat;
   position: absolute;
   top: 0;
   z-index: 1;
@@ -1825,6 +1875,48 @@ form {
 .add-when-not-mobile .after-slider {
   position: absolute;
   left: 100vw;
+}
+
+.project {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.project .description-wrapper {
+  width: 87.5%;
+  padding: 8%;
+}
+
+.project .description-wrapper p {
+  margin-bottom: 5%;
+}
+
+.project .project-margin {
+  width: 12.5vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.project .project-margin img {
+  height: 7vh;
+}
+
+video {
+  width: 100%;
+  border: solid white 3px;
+  margin-bottom: 5%;
 }
 
 section.about-me-section {

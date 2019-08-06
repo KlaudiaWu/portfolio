@@ -23,15 +23,47 @@
 .project-container {
   position: relative;
 
-    div{
+    div.project{
     width: 50vw;
     height: 100vh;
     box-shadow: 0px 0px 32px -5px rgba(0,0,0,0.7);
+    
       @include rwd ('small-p', 'p') {
+        height: auto;
         width: 100vw;
+        flex-direction: column-reverse;
+        background-size: 110% 110%;
       }
       @include rwd ('small-l', 'l') {
+        height: auto;
         width: 100vw;
+        background-size: 110% auto;
+      }
+      .project-arrow {
+        @include rwd ('small-p', 'p') {
+          display: none;
+        }
+        @include rwd ('small-l', 'l') {
+          display: none;
+        }
+        @include rwd ('medium-l', 'l') {
+          display: block;
+        }
+        @include rwd ('large', 'l') {
+          display: block;
+        }
+
+      }
+      .project-margin img {
+        @include rwd ('small-p', 'p') {
+          margin: 5vh 0;
+        }
+      }
+      .description-wrapper {
+        @include rwd ('small-p', 'p') {
+          width: 100%;
+          padding: 4% 8% 15%;
+        }
       }
     }
 } 
@@ -48,13 +80,23 @@
   }
 }
 
-.project {
-  @include rwd ('small-p', 'p') {
-    background-size: 110% 110%;
-  }
-  @include rwd ('small-l', 'l') {
-    background-size: 100% auto;
-  }
+
+
+
+.project-start {
+  background: url("https://klaudiawojciak.pl/img/neptune-background.jpg") center no-repeat;
+}
+.project1 {
+  background: url("https://klaudiawojciak.pl/img/mercury-background.jpg") center no-repeat;
+}
+.project2 {
+  background: url("https://klaudiawojciak.pl/img/jupiter-background.jpg") center center no-repeat;
+}
+.project3 {
+  background: url("https://klaudiawojciak.pl/img/earth-background.jpg") center center no-repeat;
+}
+.project4 {
+  background: url("https://klaudiawojciak.pl/img/mars-background.jpg") 35% center no-repeat;
 }
 
 .add-when-not-mobile {
@@ -64,39 +106,34 @@
   .portfolio-section .project-container {
     position: relative;
   
-    div {
+    div.project {
     width: 50vw;
     height: 100vh;
     box-shadow: 0px 0px 32px -5px rgba(0,0,0,0.7);
     }
     .project-start {
-      background: url("https://klaudiawojciak.pl/img/neptune-background.jpg") center no-repeat;
       position: relative;
       z-index: 5;
     }
     .project1 {
-      background: url("https://klaudiawojciak.pl/img/mercury-background.jpg") center no-repeat;
       position: absolute;
       top: 0;
       z-index: 4;
       left: 12.5%;
     }
     .project2 {
-      background: url("https://klaudiawojciak.pl/img/jupiter-background.jpg") center center no-repeat;
       position: absolute;
       top: 0;
       z-index: 3;
       left: 25%;
     }
     .project3 {
-      background: url("https://klaudiawojciak.pl/img/earth-background.jpg") center center no-repeat;
       position: absolute;
       top: 0;
       z-index: 2;
       left: 37.5%;
     }
     .project4 {
-      background: url("https://klaudiawojciak.pl/img/mars-background.jpg") 35% center no-repeat;
       position: absolute;
       top: 0;
       z-index: 1;
@@ -107,4 +144,30 @@
     position: absolute;
     left: 100vw;
   }
+}
+
+.project {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  .description-wrapper {
+    width: 87.5%;
+    padding: 8%;
+    p {
+      margin-bottom: 5%;
+    }
+  }
+  .project-margin {
+    width: 12.5vw;
+    display: flex;
+    justify-content: center;
+    img {
+      height: 7vh;
+    }
+  }
+}
+video {
+  width: 100%;
+  border: solid white 3px;
+  margin-bottom: 5%;
 }

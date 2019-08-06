@@ -13,7 +13,9 @@ h1 {
 
 h2 {
   font-family: $arima;  
-  @include vertical-rhythm(2.25em);  
+  @include vertical-rhythm(2.25em); 
+  line-height: 1em;
+  margin-bottom: 5%;
 }
 
 .sun h2 {
