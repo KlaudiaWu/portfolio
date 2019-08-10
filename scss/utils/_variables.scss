@@ -35,3 +35,12 @@ $orientations: (
 $navy-blue: #00000B;
 $white: #FFFFFF;
 $black: #000000;
+
+/* Variables of preloader */
+//variables
+$bg-color: $black; //container background-color;
+$basic-dark-color: $white; //color of the spinner
+$border-width: 6px; //width of spinners border
+$basic-spinner-dimensions: 125px; //width and height of spinner
+$main-spinner-dimensions: $basic-spinner-dimensions - $border-width * 2; //width and height of bigger circle
+$small-spinner-dimensions: $main-spinner-dimensions * 0.7; //width and height of smaller circle
